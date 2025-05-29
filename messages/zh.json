@@ -1,0 +1,86 @@
+{
+  "navigation": {
+    "home": "首页",
+    "products": "产品",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "blog": "博客"
+  },
+  "hero": {
+    "title": "优质蚕丝被与丝绵被",
+    "subtitle": "体验天然蚕丝带来的奢华睡眠体验",
+    "cta": "立即购买",
+    "slide1Title": "优质蚕丝被",
+    "slide1Subtitle": "无与伦比的奢华与舒适，带来完美的睡眠体验",
+    "slide1Cta": "探索系列",
+    "slide2Title": "纯桑蚕丝",
+    "slide2Subtitle": "温度调节、低过敏性，天然美丽",
+    "slide2Cta": "立即选购",
+    "slide3Title": "四季舒适",
+    "slide3Subtitle": "完美重量与透气性，全年享受奢华体验",
+    "slide3Cta": "查看产品"
+  },
+  "featured": {
+    "title": "精选产品",
+    "viewAll": "查看全部"
+  },
+  "benefits": {
+    "title": "为什么选择蚕丝?",
+    "comfort": {
+      "title": "极致舒适",
+      "description": "蚕丝提供无与伦比的柔软度和舒适度，带来最佳睡眠体验"
+    },
+    "temperature": {
+      "title": "温度调节",
+      "description": "自然地在夏季保持凉爽，冬季保持温暖"
+    },
+    "hypoallergenic": {
+      "title": "低过敏性",
+      "description": "适合敏感肌肤和过敏体质者"
+    },
+    "durable": {
+      "title": "持久耐用",
+      "description": "高品质蚕丝在正确护理下可使用多年"
+    }
+  },
+  "footer": {
+    "subscribe": "订阅我们的新闻简报",
+    "subscribeButton": "订阅",
+    "copyright": "© 2024 太湖丝绸。保留所有权利。",
+    "shipping": "订单满150美元免费送货",
+    "returns": "30天轻松退货",
+    "support": "24/7客户支持"
+  },
+  "products": {
+    "title": "我们的产品",
+    "subtitle": "探索我们的优质丝绸产品系列",
+    "items": "件产品",
+    "view": "查看系列",
+    "pure": "纯丝绸",
+    "pure_desc": "所有产品均采用100%纯丝绸制作",
+    "clients": "满意客户",
+    "clients_desc": "为全球500多家客户提供优质服务",
+    "years": "年经验",
+    "years_desc": "十余年丝绸生产经验",
+    "cta_title": "准备开启您的丝绸之旅？",
+    "cta_desc": "立即联系我们，了解您的需求并探索我们的独家系列",
+    "contact": "联系我们",
+    "breadcrumb": {
+      "home": "首页",
+      "products": "产品"
+    },
+    "filter": {
+      "all": "全部产品",
+      "allSeason": "四季适用",
+      "winter": "冬季系列",
+      "summer": "夏季系列",
+      "hotel": "酒店系列",
+      "organic": "有机系列",
+      "children": "儿童系列",
+      "bestSelling": "热销商品",
+      "newest": "最新上架",
+      "priceLow": "价格: 从低到高",
+      "priceHigh": "价格: 从高到低"
+    }
+  }
+}
