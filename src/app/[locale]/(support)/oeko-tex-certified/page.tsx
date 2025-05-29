@@ -1,4 +1,10 @@
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'OEKO-TEX Certified-Taihu Snow Silk',
+  description: 'Taihu Snow Silk is OEKO-TEX® Standard 100 Certified, ensuring the highest safety standards for textiles through rigorous testing and certification processes',
+};
 
 
 export default function OekoTexPage() {
