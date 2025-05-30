@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { ContactButton } from "@/components/ContactButton";
 import { HomeBanner } from "@/components/HomeBanner";
 import AutoCarousel from "@/components/product/AutoCarousel";
-import { CarouselProducts } from "@/lib/products";
+import { products } from "@/lib/products";
 
 export const metadata: Metadata = {
   title: "Wholesale Bedding: Hotel bedding Quality, Great Prices - Taihu Snow Silk",
@@ -167,7 +167,7 @@ export default function Home() {
           <p className="text-gray-600 text-center mb-16 max-w-3xl mx-auto">
             Explore our premium silk duvet cover set collections designed for various seasons and needs
           </p>
-          <AutoCarousel products={CarouselProducts} />
+          <AutoCarousel products={products} />
         </div>
       </section>
 

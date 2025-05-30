@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import AutoCarousel from "@/components/product/AutoCarousel";
-import { CarouselProducts } from "@/lib/products";
+import { products } from "@/lib/products";
 import { ContactButton } from '@/components/ContactButton';
 import Breadcrumb from '@/components/Breadcrumb';
 import type { Metadata } from 'next';
@@ -248,7 +248,7 @@ export default function WholesaleSilkDuvetPage() {
           <p className="text-gray-600 text-lg mb-12 text-center max-w-4xl mx-auto">
             Sinosilk offers a full range of silk bedding, available both as individual items and in sets. Made from 100% mulberry silk satin, our products come in various thickness options, including 16, 19, 22, 25, and 30 momme.
           </p>
-          <AutoCarousel products={CarouselProducts} />
+          <AutoCarousel products={products} />
         </div>
       </section>
 

@@ -10,7 +10,7 @@ export default function ProductFilter() {
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filterCategories = [
-    { id: 'all', name: t('filter.all') },
+    { id: 'all', name: "All Products" },
     // { id: 'all-season', name: t('filter.allSeason') },
     // { id: 'winter', name: t('filter.winter') },
     // { id: 'summer', name: t('filter.summer') },

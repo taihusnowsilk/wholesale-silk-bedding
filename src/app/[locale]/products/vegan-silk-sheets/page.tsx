@@ -1,6 +1,6 @@
 import { ProductInfo, type Product } from "@/components/product/ProductInfo";
 import type { Metadata } from "next";
-import { CarouselProducts } from "@/lib/products";
+import { products } from "@/lib/products";
 import AutoCarousel from "@/components/product/AutoCarousel";
 import Image from "next/image";
 import { AnchorNav, sections } from "@/components/product/AnchorNav";
@@ -284,7 +284,7 @@ export default function VeganSilkSheets() {
       <section id="related-products" className="pb-16">
         <div className="container mx-auto px-4 md:px-8">
           <h2 className="text-3xl font-bold text-gray-900 mb-10 text-center">Related Products</h2>
-          <AutoCarousel products={CarouselProducts} />
+          <AutoCarousel products={products} />
         </div>
       </section>
     </main>
