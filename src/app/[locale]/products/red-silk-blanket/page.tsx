@@ -38,12 +38,12 @@ const productData: Product = {
   ],
   colors: ["Red", "Pink", "Blue", "Green", "Custom Color"],
   imagesUrl: [
-    '/images/silk-quilt-blanket-1.webp',
-    '/images/silk-quilt-blanket-2.webp',
-    '/images/silk-quilt-blanket-3.webp',
-    '/images/silk-quilt-blanket-4.webp',
-    '/images/silk-quilt-blanket-5.webp',
-    '/images/silk-quilt-blanket-6.webp',
+    '/images/red-silk-blanket-1.jpg',
+    '/images/red-silk-blanket-2.jpg',
+    '/images/red-silk-blanket-3.jpg',
+    '/images/red-silk-blanket-4.jpg',
+    '/images/red-silk-blanket-5.jpg',
+    '/images/red-silk-blanket-9.jpg',
   ]
 };
 
