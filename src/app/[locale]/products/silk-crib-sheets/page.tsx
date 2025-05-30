@@ -23,22 +23,24 @@ const productData: Product = {
     "Fitted crib sheet with deep pockets for secure fit",
     "Machine-washable, available for standard crib, bassinet, and mini crib",
   ],
-  price: "$45.00 - $75.00",
-  MOQ: "100 pcs",
+  price: "$7 - $20",
+  MOQ: "50 pcs",
   sizes: [
-    "Twin (150×200cm)",
-    "Queen (200×230cm)",
-    "King (220×240cm)",
+    "Twin",
+    "Full",
+    "Queen",
+    "King",
+    "Cal.King",
     "Custom Size"
   ],
-  colors: ["Pink", "Blue", "Yellow"],
+  colors: ["Pink", "Blue", "Yellow", "Custom Color"],
   imagesUrl: [
-    '/images/custom-silk-throw-blanket-1.webp',
-    '/images/custom-silk-throw-blanket-2.webp',
-    '/images/custom-silk-throw-blanket-3.webp',
-    '/images/custom-silk-throw-blanket-4.webp',
-    '/images/custom-silk-throw-blanket-5.webp',
-    '/images/custom-silk-throw-blanket-6.webp',
+    '/images/silk-crib-sheets-1.webp',
+    '/images/silk-crib-sheets-2.webp',
+    '/images/silk-crib-sheets-3.webp',
+    '/images/silk-crib-sheets-4.webp',
+    '/images/silk-crib-sheets-5.webp',
+    '/images/silk-crib-sheets-6.webp',
   ]
 };
 

@@ -9,7 +9,11 @@ export const metadata: Metadata = {
   title: "Mulberry Silk Blanket: Soft Silk Quilt & Lightweight Blanket - Taihu Snow Silk",
   description: "Indulge in a Mulberry Silk Blanket. Experience the softness of a silk quilt and a lightweight throw blanket. Perfect as a red silk throw for year-round comfort.",
   alternates: {
-    canonical: '/products/red-silk-blanket',
+    canonical: 'https://www.wholesalesilkbedding.com/products/red-silk-blanket',
+    languages: {
+      "en-US": "https://www.wholesalesilkbedding.com/products/red-silk-blanket",
+      "zh-CN": "https://www.wholesalesilkbedding.com/zh/products/red-silk-blanket",
+    },
   },
 };
 
@@ -22,22 +26,24 @@ const productData: Product = {
     "Lightweight Wool-Silk Blend Options",
     "Perfect for Sofa and Bed Use"
   ],
-  price: "$45.00 - $75.00",
-  MOQ: "100 pcs",
+  price: "$20 - $80",
+  MOQ: "30 pcs",
   sizes: [
-    "Twin (150×200cm)",
-    "Queen (200×230cm)",
-    "King (220×240cm)",
+    "Twin",
+    "Full",
+    "Queen",
+    "King",
+    "Cal.King",
     "Custom Size"
   ],
-  colors: ["Pink", "Blue", "Yellow"],
+  colors: ["Red", "Pink", "Blue", "Green", "Custom Color"],
   imagesUrl: [
-    '/images/custom-silk-throw-blanket-1.webp',
-    '/images/custom-silk-throw-blanket-2.webp',
-    '/images/custom-silk-throw-blanket-3.webp',
-    '/images/custom-silk-throw-blanket-4.webp',
-    '/images/custom-silk-throw-blanket-5.webp',
-    '/images/custom-silk-throw-blanket-6.webp',
+    '/images/silk-quilt-blanket-1.webp',
+    '/images/silk-quilt-blanket-2.webp',
+    '/images/silk-quilt-blanket-3.webp',
+    '/images/silk-quilt-blanket-4.webp',
+    '/images/silk-quilt-blanket-5.webp',
+    '/images/silk-quilt-blanket-6.webp',
   ]
 };
 

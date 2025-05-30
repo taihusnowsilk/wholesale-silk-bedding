@@ -9,6 +9,13 @@ import { CarouselProducts } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Wholesale Bedding: Hotel bedding Quality, Great Prices - Taihu Snow Silk",
   description: "Wholesale Bedding: Hotel quality linen & bedding sets at great prices. Shop wholesale hotel bedding, comforter sets & more! - Suzhou Taihu Snow Silk",
+  alternates: {
+    canonical: "https://www.wholesalesilkbedding.com/",
+    languages: {
+      "en-US": "https://www.wholesalesilkbedding.com/",
+      "zh-CN": "https://www.wholesalesilkbedding.com/zh",
+    },
+  },
 };
 
 const whyChooseData = [

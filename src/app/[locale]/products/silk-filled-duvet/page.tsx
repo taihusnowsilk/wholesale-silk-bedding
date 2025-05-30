@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 }
 
 const productData: Product = {
-  title: "Premium Silk-Filled Duvet - All-Season Silk Comforter with Organic Cotton Shell for Hair and Skin Health",
+  title: "Premium Silk Filled Duvet - All-Season Silk Comforter with Organic Cotton Shell for Hair and Skin Health",
   descriptions: [
     "100% Grade 6A mulberry silk filling for superior durability",
     "300 thread count organic cotton shell, soft and breathable",
@@ -23,22 +23,24 @@ const productData: Product = {
     "Moisture-wicking and temperature-regulating for all-season comfort",
     "Box-stitched silk floss design prevents filling from shifting"
   ],
-  price: "$45.00 - $75.00",
-  MOQ: "100 pcs",
+  price: "$50 - $200",
+  MOQ: "30 pcs",
   sizes: [
-    "Twin (150×200cm)",
-    "Queen (200×230cm)",
-    "King (220×240cm)",
+    "Twin",
+    "Full",
+    "Queen",
+    "King",
+    "Cal.King",
     "Custom Size"
   ],
-  colors: ["Pink", "Blue", "Yellow"],
+  colors: ["Red", "Pink", "Blue", "White", "Custom Color"],
   imagesUrl: [
-    '/images/custom-silk-throw-blanket-1.webp',
-    '/images/custom-silk-throw-blanket-2.webp',
-    '/images/custom-silk-throw-blanket-3.webp',
-    '/images/custom-silk-throw-blanket-4.webp',
-    '/images/custom-silk-throw-blanket-5.webp',
-    '/images/custom-silk-throw-blanket-6.webp',
+    '/images/silk-filled-duvet-1.webp',
+    '/images/silk-filled-duvet-2.webp',
+    '/images/silk-filled-duvet-3.webp',
+    '/images/silk-filled-duvet-4.webp',
+    '/images/silk-filled-duvet-5.webp',
+    '/images/silk-filled-duvet-6.webp',
   ]
 };
 

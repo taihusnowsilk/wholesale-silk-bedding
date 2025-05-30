@@ -23,16 +23,18 @@ const productData: Product = {
     "Wrinkle-resistant and machine-washable on gentle cycle",
     "Available in Queen (standard) and King sizes with fitted sheet, flat sheet, and pillowcases"
   ],
-  price: "$45.00 - $75.00",
-  MOQ: "100 pcs",
+  price: "$65- $125",
+  MOQ: "30 pcs",
   sizes: [
-    "Twin (150×200cm)",
-    "Queen (200×230cm)",
-    "King (220×240cm)",
+    "Full",
+    "Queen",
+    "King",
+    "Cal.King",
     "Custom Size"
   ],
-  colors: ["Pink", "Blue", "Yellow"],
+  colors: ["Pink", "Blue", "White", "Custom Color"],
   imagesUrl: [
+    '/images/vegan-silk-sheets-1.webp',
     '/images/natural-soft-silk-quilt-1.webp',
     '/images/natural-soft-silk-quilt-2.webp',
     '/images/natural-soft-silk-quilt-3.webp',
