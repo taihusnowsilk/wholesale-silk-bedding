@@ -36,6 +36,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
+        <head>
+        <link 
+          rel="preload" 
+          href="https://www.googletagmanager.com/gtag/js?id=G-F31FS4THEZ" 
+          as="script"
+        />
+      </head>
       <body className={`${inter.className} min-h-screen bg-secondary flex flex-col`}>
         <NextIntlClientProvider>
             <Header />
