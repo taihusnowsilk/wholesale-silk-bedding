@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import ContactWidget from '@/components/ContactWidget';
 import { Inter } from 'next/font/google';
 import type { Metadata } from "next";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 export const metadata: Metadata = {
   title: "Wholesale Silk Bedding Sets: Taihu Snow Silk Bed Set Deals",
@@ -43,6 +44,7 @@ export default async function LocaleLayout({
             <ContactWidget />
         </NextIntlClientProvider>
       </body>
+      <GoogleAnalytics gaId="G-F31FS4THEZ" />
     </html>
   );
 } 
