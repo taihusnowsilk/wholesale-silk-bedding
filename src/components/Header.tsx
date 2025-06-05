@@ -13,9 +13,6 @@ export default function Header() {
   const productItems = [
     { label: 'All Products', href: '/products' },
     { label: 'Wholesale Silk Duvet', href: '/products/wholesale-silk-duvet' },
-    { label: 'Wholesale Silk Pillowcase', href: '/products/wholesale-silk-pillowcase' },
-    { label: 'Wholesale Silk Fitted Sheet', href: '/products/wholesale-silk-fitted-sheet' },
-    { label: 'Wholesale Silk Crib Sheet', href: '/products/wholesale-silk-crib-sheets' },
     { label: 'Silk Crib Sheets', href: '/products/silk-crib-sheets' },
     { label: 'Silk Filled Duvet', href: '/products/silk-filled-duvet' },
     { label: 'Red Silk Blanket', href: '/products/red-silk-blanket' },

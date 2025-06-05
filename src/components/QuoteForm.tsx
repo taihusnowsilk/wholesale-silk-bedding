@@ -18,6 +18,9 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
     message: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -39,16 +42,65 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
     setFormData(prev => ({ ...prev, quantity: String(Math.max(30, num + step)) }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     let num = Number(formData.quantity);
     if (isNaN(num) || num < 30) num = 30;
-    // TODO: handle submit
-    console.log({ ...formData, quantity: num, productName, size, color });
+    
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'quote',
+          ...formData,
+          quantity: num,
+          productName,
+          size,
+          color,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          quantity: '30',
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
+      {submitStatus === 'success' && (
+        <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+          Your message is received! We’ll be in touch shortly.
+        </div>
+      )}
+      
+      {submitStatus === 'error' && (
+        <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+          Failed to send quote request. Please try again.
+        </div>
+      )}
+
       {/* Product Info */}
       <div className="flex items-center gap-4">
         <label className="w-24 text-sm font-medium text-gray-700">Product</label>
@@ -65,7 +117,14 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
       <div className="flex items-center gap-4">
         <label className="w-24 text-sm font-medium text-gray-700">Quantity</label>
         <div className="flex items-center gap-2 flex-1">
-          <button type="button" className="w-8 h-8 rounded bg-gray-200" onClick={() => handleQuantityStep(-1)}>-</button>
+          <button 
+            type="button" 
+            className="w-8 h-8 rounded bg-gray-200 disabled:opacity-50" 
+            onClick={() => handleQuantityStep(-1)}
+            disabled={isSubmitting}
+          >
+            -
+          </button>
           <input
             type="number"
             name="quantity"
@@ -73,9 +132,17 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
             value={formData.quantity}
             onChange={e => handleQuantityChange(e.target.value)}
             onBlur={handleQuantityBlur}
-            className="w-20 rounded-md border-gray-300 text-center"
+            disabled={isSubmitting}
+            className="w-20 rounded-md border-gray-300 text-center disabled:bg-gray-100"
           />
-          <button type="button" className="w-8 h-8 rounded bg-gray-200" onClick={() => handleQuantityStep(1)}>+</button>
+          <button 
+            type="button" 
+            className="w-8 h-8 rounded bg-gray-200 disabled:opacity-50" 
+            onClick={() => handleQuantityStep(1)}
+            disabled={isSubmitting}
+          >
+            +
+          </button>
         </div>
       </div>
       {/* User Info */}
@@ -88,7 +155,8 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
           value={formData.name}
           onChange={handleChange}
           required
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
       <div className="flex items-center gap-4">
@@ -100,7 +168,8 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
           value={formData.email}
           onChange={handleChange}
           required
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
       <div className="flex items-center gap-4">
@@ -111,7 +180,8 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
       <div className="flex items-center gap-4">
@@ -122,7 +192,8 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
           name="company"
           value={formData.company}
           onChange={handleChange}
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
       <div className="flex gap-4">
@@ -134,14 +205,16 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
           onChange={handleChange}
           rows={4}
           required
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
       <button
         type="submit"
-        className="mx-auto block cursor-pointer bg-[#B4A183] text-white py-2 px-4 rounded-md hover:bg-[#9A8B73] focus:outline-none focus:ring-2 focus:ring-[#B4A183] focus:ring-offset-2 transition-colors duration-200"
+        disabled={isSubmitting}
+        className="mx-auto block cursor-pointer bg-[#B4A183] text-white py-2 px-4 rounded-md hover:bg-[#9A8B73] focus:outline-none focus:ring-2 focus:ring-[#B4A183] focus:ring-offset-2 transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Quote
+        {isSubmitting ? 'Sending...' : 'Send Quote'}
       </button>
     </form>
   );

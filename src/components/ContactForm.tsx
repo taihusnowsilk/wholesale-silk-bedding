@@ -12,10 +12,45 @@ export function ContactForm({ className }: { className?: string }) {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: 实现表单提交逻辑
-    console.log('Form submitted:', { ...formData });
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'contact',
+          ...formData,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          company: '',
+          inquiryType: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Submit error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -25,6 +60,18 @@ export function ContactForm({ className }: { className?: string }) {
 
   return (
     <form onSubmit={handleSubmit} className={`space-y-4 max-w-lg mx-auto ${className}`}>
+      {submitStatus === 'success' && (
+        <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
+          Your message is received! We’ll be in touch shortly.
+        </div>
+      )}
+      
+      {submitStatus === 'error' && (
+        <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
+          Failed to send message. Please try again.
+        </div>
+      )}
+
       <div className="flex items-center gap-4">
         <label htmlFor="name" className="w-24 text-sm font-medium">
           Name *
@@ -36,7 +83,8 @@ export function ContactForm({ className }: { className?: string }) {
           value={formData.name}
           onChange={handleChange}
           required
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
 
@@ -51,7 +99,8 @@ export function ContactForm({ className }: { className?: string }) {
           value={formData.email}
           onChange={handleChange}
           required
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
 
@@ -65,7 +114,8 @@ export function ContactForm({ className }: { className?: string }) {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
 
@@ -79,7 +129,8 @@ export function ContactForm({ className }: { className?: string }) {
           name="company"
           value={formData.company}
           onChange={handleChange}
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
 
@@ -94,15 +145,17 @@ export function ContactForm({ className }: { className?: string }) {
           onChange={handleChange}
           rows={4}
           required
-          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+          disabled={isSubmitting}
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100"
         />
       </div>
 
       <button
         type="submit"
-        className="mx-auto block cursor-pointer bg-primary/80 hover:bg-primary text-secondary font-semibold py-2 px-4 rounded-md transition-colors duration-300"
+        disabled={isSubmitting}
+        className="mx-auto block cursor-pointer bg-primary/80 hover:bg-primary text-secondary font-semibold py-2 px-4 rounded-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        Send Message
+        {isSubmitting ? 'Sending...' : 'Send Message'}
       </button>
     </form>
   );

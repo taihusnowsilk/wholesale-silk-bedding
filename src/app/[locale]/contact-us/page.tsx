@@ -73,7 +73,6 @@ export default function ContactPage() {
               </h3>
               <div>
                 <p>carol@taihusnow.com</p>
-                <p>sales@wholesalesilkbedding.com</p>
               </div>
             </div>
 
