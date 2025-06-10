@@ -12,6 +12,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     locale,
     translationModule: 'page',
     translationKey: 'products.metadata',
+    pathname: 'products',
   });
 }
 export default function ProductsPage() {
