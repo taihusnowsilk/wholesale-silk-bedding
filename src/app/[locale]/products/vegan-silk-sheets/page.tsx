@@ -34,12 +34,11 @@ const productData: Product = {
   colors: ["Pink", "Blue", "White", "Custom Color"],
   imagesUrl: [
     '/images/vegan-silk-sheets-1.webp',
-    '/images/natural-soft-silk-quilt-1.webp',
-    '/images/natural-soft-silk-quilt-2.webp',
-    '/images/natural-soft-silk-quilt-3.webp',
-    '/images/natural-soft-silk-quilt-4.webp',
-    '/images/natural-soft-silk-quilt-5.webp',
-    '/images/natural-soft-silk-quilt-6.webp',
+    '/images/vegan-silk-sheets-2.webp',
+    '/images/vegan-silk-sheets-3.webp',
+    '/images/vegan-silk-sheets-4.webp',
+    '/images/vegan-silk-sheets-5.webp',
+    '/images/vegan-silk-sheets-6.webp',
   ]
 };
 

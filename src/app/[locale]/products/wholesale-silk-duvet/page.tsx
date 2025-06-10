@@ -19,7 +19,7 @@ const categoryData = [
     emoji: "🌙",
     title: "All-Season Mulberry Silk Duvet & Comforter Sets",
     description: "Medium weight silk duvets perfect for year-round comfort. Our pure mulberry silk filled products feature hypoallergenic properties ideal for most climates and sleeping preferences.",
-    href: "/all-season-mulberry-silk-duvet-comforter-sets",
+    href: "#",
     features: [
       "Grade A Pure Mulberry Silk Fill",
       "300-400GSM Weight Range", 
@@ -36,7 +36,7 @@ const categoryData = [
     emoji: "☀️",
     title: "Summer Weight Silk Duvet & Silk Satin Bed Set",
     description: "Lightweight silk duvets designed for warm weather. Ultra-breathable silk fabric fibers with superior temperature regulation and moisture-wicking properties.",
-    href: "/summer-weight-silk-duvet-silk-satin-bed-set",
+    href: "#",
     features: [
       "Premium Long-Fiber Silk",
       "150-250GSM Light Weight",
@@ -53,7 +53,7 @@ const categoryData = [
     emoji: "❄️",
     title: "Winter Silk & Mulberry Silk Filled Duvets",
     description: "Heavier winter silk duvets providing extra warmth while maintaining breathability for cold seasons. Features luxury and comfort with enhanced insulation.",
-    href: "/winter-silk-mulberry-silk-filled-duvets",
+    href: "#",
     features: [
       "Extra Mulberry Silk Fill Density",
       "500-600GSM Weight",
@@ -70,7 +70,7 @@ const categoryData = [
     emoji: "👑",
     title: "Luxury Silk Satin & Pure Mulberry Silk Duvet Collection",
     description: "Premium grade luxury silk satin duvets with superior construction and finishing for high-end retail markets. Features 19 momme silk with higher momme count for enhanced durability.",
-    href: "/luxury-silk-satin-pure-mulberry-silk-duvet-collection",
+    href: "#",
     features: [
       "Grade 6A Mulberry Silk",
       "Hand-Stretched Construction",
@@ -87,7 +87,7 @@ const categoryData = [
     emoji: "🏨",
     title: "Hotel Grade Silk Bed & Silk Comforter Sets",
     description: "Commercial-grade silk bed products designed for hospitality industry with enhanced durability. Perfect for hotels and resorts requiring high-quality silk bedding items.",
-    href: "/hotel-grade-silk-bed-silk-comforter-sets",
+    href: "#",
     features: [
       "Commercial Durability Standards",
       "Frequent Wash Resistant Silk",
@@ -104,7 +104,7 @@ const categoryData = [
     emoji: "👶",
     title: "Children's Silk Duvet & Home Silk Products",
     description: "Specially designed home silk duvets for children with safety features and appropriate sizing. Features hypoallergenic silk properties perfect for sensitive skin.",
-    href: "/childrens-silk-duvet-home-silk-products",
+    href: "#",
     features: [
       "Child-Safe Silk Materials",
       "Smaller Dimensions Available", 

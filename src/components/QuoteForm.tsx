@@ -4,13 +4,15 @@ import { useState } from 'react';
 
 interface QuoteFormProps {
   productName: string;
-  size: string;
-  color: string;
+  size?: string;
+  color?: string;
 }
 
-export function QuoteForm({ productName, size, color }: QuoteFormProps) {
+export function QuoteForm({ productName, size = '', color = '' }: QuoteFormProps) {
   const [formData, setFormData] = useState({
     quantity: '30',
+    size: size,
+    color: color,
     name: '',
     email: '',
     phone: '',
@@ -61,8 +63,6 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
           ...formData,
           quantity: num,
           productName,
-          size,
-          color,
         }),
       });
 
@@ -70,6 +70,8 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
         setSubmitStatus('success');
         setFormData({
           quantity: '30',
+          size: '',
+          color: '',
           name: '',
           email: '',
           phone: '',
@@ -91,7 +93,7 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
     <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
-          Your message is received! We’ll be in touch shortly.
+          Your message is received! We'll be in touch shortly.
         </div>
       )}
       
@@ -107,12 +109,30 @@ export function QuoteForm({ productName, size, color }: QuoteFormProps) {
         <input type="text" value={productName} readOnly className="flex-1 rounded-md border-gray-300 bg-gray-100" />
       </div>
       <div className="flex items-center gap-4">
-        <label className="w-24 text-sm font-medium text-gray-700">Size</label>
-        <input type="text" value={size} readOnly className="flex-1 rounded-md border-gray-300 bg-gray-100" />
+        <label htmlFor="size" className="w-24 text-sm font-medium text-gray-700">Size</label>
+        <input 
+          type="text" 
+          id="size"
+          name="size"
+          value={formData.size} 
+          onChange={handleChange}
+          disabled={isSubmitting}
+          placeholder="Enter preferred size"
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100" 
+        />
       </div>
       <div className="flex items-center gap-4">
-        <label className="w-24 text-sm font-medium text-gray-700">Color</label>
-        <input type="text" value={color} readOnly className="flex-1 rounded-md border-gray-300 bg-gray-100" />
+        <label htmlFor="color" className="w-24 text-sm font-medium text-gray-700">Color</label>
+        <input 
+          type="text" 
+          id="color"
+          name="color"
+          value={formData.color} 
+          onChange={handleChange}
+          disabled={isSubmitting}
+          placeholder="Enter preferred color"
+          className="flex-1 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 disabled:bg-gray-100" 
+        />
       </div>
       <div className="flex items-center gap-4">
         <label className="w-24 text-sm font-medium text-gray-700">Quantity</label>
