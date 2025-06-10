@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Mulberry Silk Comforter: All-Season Silk Filled Duvet - Taihu Snow Silk",
   description: "Mulberry Silk Comforter: All-Season Silk Filled Duvet. Experience luxurious comfort with a breathable & hypoallergenic silk-filled comforter. Enjoy a silk duvet, perfect all year!",
   alternates: {
-    canonical: "/products/silk-filled-duvet",
+    canonical: "https://www.wholesalesilkbedding.com/products/silk-filled-duvet",
   },
 }
 

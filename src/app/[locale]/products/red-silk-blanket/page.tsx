@@ -9,10 +9,6 @@ export const metadata: Metadata = {
   description: "Indulge in a Mulberry Silk Blanket. Experience the softness of a silk quilt and a lightweight throw blanket. Perfect as a red silk throw for year-round comfort.",
   alternates: {
     canonical: 'https://www.wholesalesilkbedding.com/products/red-silk-blanket',
-    languages: {
-      "en-US": "https://www.wholesalesilkbedding.com/products/red-silk-blanket",
-      "zh-CN": "https://www.wholesalesilkbedding.com/zh/products/red-silk-blanket",
-    },
   },
 };
 

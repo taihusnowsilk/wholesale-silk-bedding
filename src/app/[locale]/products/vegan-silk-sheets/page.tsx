@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Vegan Silk Sheets: Eucalyptus & The Best Silk Sheet Options - Taihu Snow Silk",
   description: "Explore vegan silk sheets: luxurious silk sheet options including Eucalyptus. Find the best vegan silk bedding and sheet sets here!",
   alternates: {
-    canonical: '/products/vegan-silk-sheets',
+    canonical: 'https://www.wholesalesilkbedding.com/products/vegan-silk-sheets',
   },
 };
 

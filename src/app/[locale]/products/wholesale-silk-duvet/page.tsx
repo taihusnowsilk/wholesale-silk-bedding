@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Wholesale Silk Bed & Silk Duvet - China Silk Bedding - Taihu Snow Silk',
   description: 'Discover premium wholesale silk bed & silk duvet options. High quality silk bedding, including breathable mulberry silk duvets, available now! -Taihu Snow Silk',
   alternates: {
-    canonical: '/products/wholesale-silk-duvet',
+    canonical: 'https://www.wholesalesilkbedding.com/products/wholesale-silk-duvet',
   },
 };
 

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Silk Crib Sheet: Natural White silky tots fitted sheet  for Baby Hair - Taihu Snow Silk",
   description: "Natural white silk crib sheet helps prevent baby bald spots. Silky tots fitted sheet is hypoallergenic, gentle on baby hair, and good for sensitive skin.",
   alternates: {
-    canonical: '/products/silk-crib-sheets',
+    canonical: 'https://www.wholesalesilkbedding.com/products/silk-crib-sheets',
   },
 };  
 
