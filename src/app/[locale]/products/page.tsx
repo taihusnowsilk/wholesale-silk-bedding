@@ -3,9 +3,19 @@ import { useTranslations } from 'next-intl'
 import ProductFilter from '@/components/product/ProductFilter'
 import ProductsBreadcrumb from '@/components/Breadcrumb'
 import { ContactButton } from '@/components/ContactButton'
+import { generateMultilingualMetadata } from "@/lib/metadata";
+import type { Metadata } from "next";
 
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return generateMultilingualMetadata({
+    locale,
+    translationModule: 'page',
+    translationKey: 'products.metadata',
+  });
+}
 export default function ProductsPage() {
-  const t = useTranslations('products')
+  const t = useTranslations('page.products')
 
   return (
     <>
@@ -31,7 +41,7 @@ export default function ProductsPage() {
       <div className="container mx-auto px-4 py-4">
         {/* Breadcrumb */}
         <ProductsBreadcrumb items={[
-          { label: 'Products', isCurrent: true },
+          { label: t('products'), isCurrent: true },
         ]} />
 
         {/* Products Filter and Grid */}
@@ -64,10 +74,10 @@ export default function ProductsPage() {
       {/* CTA Section */}
       <div className="py-20">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Start Your Silk Journey?</h2>
-          <p className="text-xl mb-8">Contact us today to discuss your requirements and discover our exclusive collections</p>
-          <ContactButton className="text-lg px-8">
-            Contact Us
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('cta')}</h2>
+          <p className="text-xl mb-8">{t('cta_desc')}</p>
+          <ContactButton title={t('cta_button')} className="text-lg px-8">
+            {t('cta_button')}
           </ContactButton>
         </div>
       </div>

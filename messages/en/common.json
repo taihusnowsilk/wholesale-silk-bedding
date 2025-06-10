@@ -1,0 +1,59 @@
+{
+"header": {
+      "logo": "Taihu Snow Silk",
+      "home": "Home",
+      "products": "Products",
+      "allProducts": "All Products",
+      "wholesaleSilkDuvet": "Wholesale Silk Duvet",
+      "silkCribSheets": "Silk Crib Sheets",
+      "silkFilledDuvet": "Silk Filled Duvet",
+      "redSilkBlanket": "Red Silk Blanket",
+      "veganSilkSheets": "Vegan Silk Sheets",
+      "wholesale": "Wholesale",
+      "oemOdmSilk": "OEM/ODM Silk",
+      "silkDuvetManufacturer": "Silk Duvet Manufacturer",
+      "silkQuality": "Silk Quality", 
+      "silkProductionProcess": "Silk Production Process",
+      "support": "Support",
+      "aboutUs": "About Us",
+      "sustainability": "Sustainability",
+      "oekoTexCertified": "OEKO-TEX Certified",
+      "contactUs": "Contact Us",
+      "blog": "Blog",
+      "news": "News",
+      "silkGuides": "Silk Guides",
+      "silkMaterials": "Silk Materials",
+      "silkCare": "Silk Care",
+      "silkCompare": "Silk Compare"
+    },
+    "footer": {
+      "logo": "Taihu Snow Silk",
+      "description": "Premium silk bedding products for the best nights sleep you've ever experienced.",
+      "quickLinks": "Quick Links",
+      "home": "Home",
+      "aboutUs": "About Us",
+      "contactUs": "Contact Us",
+      "blog": "Blog",
+      "help": "Help",
+      "faqs": "FAQs",
+      "shippingPolicy": "Shipping Policy",
+      "returnsExchanges": "Returns & Exchanges",
+      "paymentMethods": "Payment Methods",
+      "privacyPolicy": "Privacy Policy",
+      "copyright": "© 2025 Taihu Snow Silk. All rights reserved."
+    },
+    "contactForm": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company",
+      "message": "Your Message",
+      "sending": "Sending...",
+      "sendMessage": "Send Message",
+      "messageReceived": "Your message is received! We’ll be in touch shortly.",
+      "messageFailed": "Failed to send message. Please try again."
+    },
+    "productCard": {
+      "sendInquiryNow": "Send Inquiry Now"
+    }
+}

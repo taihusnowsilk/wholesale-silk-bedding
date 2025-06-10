@@ -1,0 +1,32 @@
+{
+  "filter": {
+    "all": "所有产品",
+    "allSeason": "四季系列",
+    "winter": "冬季系列",
+    "summer": "夏季系列",
+    "hotel": "酒店系列",
+    "children": "儿童系列"
+  },
+  "items": {
+    "redSilkBlanket": {
+      "title": "红色丝绸被",
+      "description": "高级红色丝绸被 - 纯桑蚕丝床上用品被子，深红色丝绸凉爽轻质设计，适用于沙发",
+      "alt": "红色丝绸被"
+    },
+    "silkCribSheets": {
+      "title": "丝绸婴儿床单",
+      "description": "高级丝绸婴儿床单 - 天然白色桑蚕丝贴身床单，适用于婴儿床和婴儿床垫",
+      "alt": "丝绸婴儿床单"
+    },
+    "silkFilledDuvet": {
+      "title": "丝绸填充被",
+      "description": "高级丝绸填充被 - 四季丝绸被子，有机棉外壳，有益头发和皮肤健康",
+      "alt": "丝绸填充被"
+    },
+    "veganSilkSheets": {
+      "title": "纯素丝绸床单",
+      "description": "最佳丝绸床单 - 高级纯素丝绸床上用品系列",
+      "alt": "纯素丝绸床单"
+    }
+  }
+}

@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export function ContactForm({ className }: { className?: string }) {
+  const t = useTranslations('common.contactForm');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -54,6 +56,7 @@ export function ContactForm({ className }: { className?: string }) {
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
@@ -62,19 +65,19 @@ export function ContactForm({ className }: { className?: string }) {
     <form onSubmit={handleSubmit} className={`space-y-4 max-w-lg mx-auto ${className}`}>
       {submitStatus === 'success' && (
         <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-md">
-          Your message is received! We’ll be in touch shortly.
+          {t('messageReceived')}
         </div>
       )}
       
       {submitStatus === 'error' && (
         <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-md">
-          Failed to send message. Please try again.
+          {t('messageFailed')}
         </div>
       )}
 
       <div className="flex items-center gap-4">
         <label htmlFor="name" className="w-24 text-sm font-medium">
-          Name *
+          {t('name')} *
         </label>
         <input
           type="text"
@@ -90,7 +93,7 @@ export function ContactForm({ className }: { className?: string }) {
 
       <div className="flex items-center gap-4">
         <label htmlFor="email" className="w-24 text-sm font-medium">
-          Email *
+          {t('email')} *
         </label>
         <input
           type="email"
@@ -106,7 +109,7 @@ export function ContactForm({ className }: { className?: string }) {
 
       <div className="flex items-center gap-4">
         <label htmlFor="phone" className="w-24 text-sm font-medium">
-          Phone
+          {t('phone')}
         </label>
         <input
           type="tel"
@@ -121,7 +124,7 @@ export function ContactForm({ className }: { className?: string }) {
 
       <div className="flex items-center gap-4">
         <label htmlFor="company" className="w-24 text-sm font-medium ">
-          Company
+          {t('company')}
         </label>
         <input
           type="text"
@@ -136,7 +139,7 @@ export function ContactForm({ className }: { className?: string }) {
 
       <div className="flex gap-4">
         <label htmlFor="message" className="w-24 text-sm font-medium pt-2">
-          Your Message *
+          {t('message')} *
         </label>
         <textarea
           id="message"
@@ -155,7 +158,7 @@ export function ContactForm({ className }: { className?: string }) {
         disabled={isSubmitting}
         className="mx-auto block cursor-pointer bg-primary/80 hover:bg-primary text-secondary font-semibold py-2 px-4 rounded-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isSubmitting ? 'Sending...' : 'Send Message'}
+        {isSubmitting ? t('sending') : t('sendMessage')}
       </button>
     </form>
   );

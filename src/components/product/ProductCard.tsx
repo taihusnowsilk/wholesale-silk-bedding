@@ -2,6 +2,7 @@ import { Link } from '@/i18n/navigation';
 import Image from 'next/image';
 import type { FC, MouseEvent } from 'react';
 import { ContactButton } from '@/components/ContactButton';
+import { useTranslations } from 'next-intl';
 
 export interface ProductCardProps {
   id: number;
@@ -14,7 +15,9 @@ export interface ProductCardProps {
   onButtonClick?: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const ProductCard: FC<ProductCardProps> = ({ image, alt, title, description, href, onButtonClick }) => (
+const ProductCard: FC<ProductCardProps> = ({ image, alt, title, description, href, onButtonClick }) => {
+  const t = useTranslations('common.productCard');
+  return (
   <div className="bg-white rounded-lg overflow-hidden shadow-sm flex flex-col h-full">
     <Link href={href} className="group flex-1 flex flex-col focus:outline-none">
       <div className="relative w-full h-48 md:h-72">
@@ -27,11 +30,12 @@ const ProductCard: FC<ProductCardProps> = ({ image, alt, title, description, hre
     </div>
 
     <div className="px-6 pb-6">
-      <ContactButton title="Send Inquiry Now" className="w-full bg-primary/70 hover:bg-primary text-secondary font-semibold p-3 rounded-md transition-colors duration-300">
-        Send Inquiry Now
+      <ContactButton title={t('sendInquiryNow')} className="w-full bg-primary/70 hover:bg-primary text-secondary font-semibold p-3 rounded-md transition-colors duration-300">
+        {t('sendInquiryNow')}
       </ContactButton>
     </div>
   </div>
-);
+  );
+};
 
-export default ProductCard; 
+export { ProductCard }; 

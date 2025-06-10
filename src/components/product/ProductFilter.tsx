@@ -2,15 +2,27 @@
 import { Button } from '@/components/ui/button'
 import { useTranslations } from 'next-intl'
 import { useState } from 'react'
-import { products } from '@/lib/products'
-import ProductCard from './ProductCard'
+import { productIds, Product } from '@/lib/products'
+import { ProductCard } from './ProductCard'
 
 export default function ProductFilter() {
   const t = useTranslations('products')
+  const tItems = useTranslations('products.items')
   const [activeFilter, setActiveFilter] = useState('all')
 
+  // 构建带翻译的产品数据
+  const products: Product[] = productIds.map(product => {
+    const { key, ...productData } = product;
+    return {
+      ...productData,
+      title: tItems(`${key}.title`),
+      description: tItems(`${key}.description`),
+      alt: tItems(`${key}.alt`),
+    };
+  });
+
   const filterCategories = [
-    { id: 'all', name: "All Products" },
+    { id: 'all', name: t('filter.all') },
     // { id: 'all-season', name: t('filter.allSeason') },
     // { id: 'winter', name: t('filter.winter') },
     // { id: 'summer', name: t('filter.summer') },
@@ -20,7 +32,7 @@ export default function ProductFilter() {
 
   const filteredProducts = activeFilter === 'all' 
     ? products 
-    : products.filter(product => product.categories.includes(activeFilter))
+    : products.filter((product: Product) => product.categories.includes(activeFilter))
 
   return (
     <>
@@ -41,7 +53,7 @@ export default function ProductFilter() {
       {/* Products Grid */}
       <div className="py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {filteredProducts.map((product) => (
+          {filteredProducts.map((product: Product) => (
             <ProductCard
               key={product.id}
               id={product.id}
@@ -50,6 +62,7 @@ export default function ProductFilter() {
               title={product.title}
               description={product.description}
               href={product.href}
+              categories={product.categories}
             />
           ))}
         </div>

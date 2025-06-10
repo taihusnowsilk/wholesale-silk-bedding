@@ -1,24 +1,31 @@
 'use client'
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "../ui/carousel";
-import ProductCard from "./ProductCard";
-
-interface Product {
-  id: number;
-  image: string;
-  alt: string;
-  title: string;
-  description: string;
-  href: string;
-}
+import { ProductCard } from "./ProductCard"; 
+import { useTranslations } from 'next-intl';
+import { productIds, Product } from '@/lib/products';
 
 interface AutoCarouselProps {
-  products: Product[];
+  className?: string;
 }
 
-export default function AutoCarousel({ products }: AutoCarouselProps) {
+export default function AutoCarousel({ className }: AutoCarouselProps) {
+  const t = useTranslations('products.items');
+  
+
+  const products: Product[] = productIds.map(product => {
+    // 排除 key 属性，只保留 Product 接口需要的属性
+    const { key, ...productData } = product;
+    return {
+      ...productData,
+      title: t(`${key}.title`),
+      description: t(`${key}.description`),
+      alt: t(`${key}.alt`),
+    };
+  });
+
   return (
-      <Carousel
+    <Carousel
       opts={{
         align: "start",
         loop: true,
@@ -28,7 +35,7 @@ export default function AutoCarousel({ products }: AutoCarouselProps) {
           delay: 3000,
         }),
       ]}
-      className="w-full"
+      className={`w-full ${className || ''}`}
     >
       <CarouselContent className="-ml-4">
         {products.map((product) => (

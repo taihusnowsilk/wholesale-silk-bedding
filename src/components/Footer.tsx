@@ -4,16 +4,16 @@ import { Link } from '@/i18n/navigation';
 import { ContactForm } from './ContactForm';
 
 export default function Footer() {
-  const t = useTranslations('footer');
+  const t = useTranslations('common.footer');
 
   return (
     <footer className="bg-primary/80 text-secondary pt-10 pb-4">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className=" text-xl font-bold mb-4">Taihu Silk</div>
+            <div className=" text-xl font-bold mb-4">{t('logo')}</div>
             <p className=" mb-4">
-              Premium silk bedding products for the best nights sleep youve ever experienced.
+              {t('description')}
             </p>
             <div className="flex space-x-4">
               <a href="#" className=" hover:text-secondary/80">
@@ -37,29 +37,28 @@ export default function Footer() {
           </div>
           
           <div>
-            <div className=" text-xl font-bold mb-4">Quick Links</div>
+            <div className=" text-xl font-bold mb-4">{t('quickLinks')}</div>
             <ul className="space-y-2">
-              <li><Link href="/" className=" hover:text-secondary/80">Home</Link></li>
-              <li><Link href="#" className=" hover:text-secondary/80">Shop</Link></li>
-              <li><Link href="#" className=" hover:text-secondary/80">About Us</Link></li>
-              <li><Link href="#" className=" hover:text-secondary/80">Contact</Link></li>
-              <li><Link href="#" className=" hover:text-secondary/80">Blog</Link></li>
+              <li><Link href="/" className=" hover:text-secondary/80">{t('home')}</Link></li>
+              <li><Link href="/about-us" className=" hover:text-secondary/80">{t('aboutUs')}</Link></li>
+              <li><Link href="/contact-us" className=" hover:text-secondary/80">{t('contactUs')}</Link></li>
+              <li><Link href="/news" className=" hover:text-secondary/80">{t('blog')}</Link></li>
             </ul>
           </div>
           
           <div>
-            <div className=" text-xl font-bold mb-4">Help</div>
+            <div className=" text-xl font-bold mb-4">{t('help')}</div>
             <ul className="space-y-2">
-              <li><Link href="#" className=" hover:text-secondary/80">FAQs</Link></li>
-              <li><Link href="#" className=" hover:text-secondary/80">Shipping Policy</Link></li>
-              <li><Link href="#" className=" hover:text-secondary/80">Returns & Exchanges</Link></li>
-              <li><Link href="#" className=" hover:text-secondary/80">Payment Methods</Link></li>
-              <li><Link href="#" className=" hover:text-secondary/80">Privacy Policy</Link></li>
+              <li><Link href="#" className=" hover:text-secondary/80">{t('faqs')}</Link></li>
+              <li><Link href="#" className=" hover:text-secondary/80">{t('shippingPolicy')}</Link></li>
+              <li><Link href="#" className=" hover:text-secondary/80">{t('returnsExchanges')}</Link></li>
+              <li><Link href="#" className=" hover:text-secondary/80">{t('paymentMethods')}</Link></li>
+              <li><Link href="#" className=" hover:text-secondary/80">{t('privacyPolicy')}</Link></li>
             </ul>
           </div>
           
           <div>
-            <div className=" text-xl font-bold mb-4">Contact Us</div>
+            <div className=" text-xl font-bold mb-4">{t('contactUs')}</div>
             <ContactForm className="text-secondary" />
           </div>
         </div>

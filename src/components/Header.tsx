@@ -7,38 +7,38 @@ import { useState } from 'react';
 import DropdownMenu from './DropdownMenu';
 
 export default function Header() {
-  const t = useTranslations('navigation');
+  const t = useTranslations('common.header');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const productItems = [
-    { label: 'All Products', href: '/products' },
-    { label: 'Wholesale Silk Duvet', href: '/products/wholesale-silk-duvet' },
-    { label: 'Silk Crib Sheets', href: '/products/silk-crib-sheets' },
-    { label: 'Silk Filled Duvet', href: '/products/silk-filled-duvet' },
-    { label: 'Red Silk Blanket', href: '/products/red-silk-blanket' },
-    { label: 'Vegan Silk Sheets', href: '/products/vegan-silk-sheets' },
+    { label: t('allProducts'), href: '/products' },
+    { label: t('wholesaleSilkDuvet'), href: '/products/wholesale-silk-duvet' },
+    { label: t('silkCribSheets'), href: '/products/silk-crib-sheets' },
+    { label: t('silkFilledDuvet'), href: '/products/silk-filled-duvet' },
+    { label: t('redSilkBlanket'), href: '/products/red-silk-blanket' },
+    { label: t('veganSilkSheets'), href: '/products/vegan-silk-sheets' },
   ];
 
   const wholesaleItems = [
-    { label: 'Wholesale', href: '/wholesale' },
-    { label: 'OEM/ODM Silk', href: '/wholesale/oem-odm-silk' },
-    { label: 'Silk Duvet Manufacturer', href: '/wholesale/silk-duvet-manufacturer' },
-    { label: 'Silk Quality', href: '/wholesale/silk-quality' },
-    { label: 'Silk Production Process', href: '/wholesale/silk-production-process' },
+    { label: t('wholesale'), href: '/wholesale' },
+    { label: t('oemOdmSilk'), href: '/wholesale/oem-odm-silk' },
+    { label: t('silkDuvetManufacturer'), href: '/wholesale/silk-duvet-manufacturer' },
+    { label: t('silkQuality'), href: '/wholesale/silk-quality' },
+    { label: t('silkProductionProcess'), href: '/wholesale/silk-production-process' },
   ];
 
   const supportItems = [
-    { label: 'About Us', href: '/about-us' },
-    { label: 'Sustainability', href: '/sustainability' },
-    { label: 'OEKO-TEX Certified', href: '/oeko-tex-certified' },
+    { label: t('aboutUs'), href: '/about-us' },
+    { label: t('sustainability'), href: '/sustainability' },
+    { label: t('oekoTexCertified'), href: '/oeko-tex-certified' },
   ];
 
   const blogItems = [
-    { label: 'News', href: '/news' },
-    { label: 'Silk Guides', href: '/silk-guides' },
-    { label: 'Silk Materials', href: '/silk-materials' },
-    { label: 'Silk Care', href: '/silk-care' },
-    { label: 'Silk Compare', href: '/silk-compare' },
+    { label: t('news'), href: '/news' },
+    { label: t('silkGuides'), href: '/silk-guides' },
+    { label: t('silkMaterials'), href: '/silk-materials' },
+    { label: t('silkCare'), href: '/silk-care' },
+    { label: t('silkCompare'), href: '/silk-compare' },
   ];
 
   return (
@@ -47,7 +47,7 @@ export default function Header() {
         <div className="flex h-16 items-center justify-between">
           <div className="flex-shrink-0">
             <Link href="/" className="text-xl font-bold h-16 px-4 flex items-center transition-colors duration-900 hover:text-primary hover:bg-secondary">
-              Taihu Snow
+              {t('logo')}
             </Link>
           </div>
           
@@ -62,20 +62,20 @@ export default function Header() {
               linkColor="hover:text-primary hover:bg-secondary"
             />
              <DropdownMenu
-              label= "Wholesale"
+              label= {t('wholesale')}
               items={wholesaleItems}
               linkColor="hover:text-primary hover:bg-secondary"
             />
              <DropdownMenu
-              label= "Support"
+              label= {t('support')}
               items={supportItems}
               linkColor="hover:text-primary hover:bg-secondary"
             />
             <Link href="/contact-us" className="transition-colors duration-900 h-16 flex items-center px-4 hover:text-primary hover:bg-secondary">
-              Contact Us
+              {t('contactUs')}
             </Link>
             <DropdownMenu
-              label= "Blog"
+              label= {t('blog')}
               items={blogItems}
               linkColor="hover:text-primary hover:bg-secondary"
             />
@@ -128,7 +128,7 @@ export default function Header() {
               </div>
               <div className="px-3 py-2">
                 <div className="text-base font-medium text-primary hover:text-primary hover:bg-secondary/80 transition-colors duration-900">
-                    Support
+                    {t('support')}
                 </div>
                 <div className="mt-2 space-y-1">
                   {supportItems.map((item) => (

@@ -1,0 +1,59 @@
+{
+  "header": {
+      "logo": "太湖雪丝绸",
+      "home": "首页",
+      "products": "产品",
+      "allProducts": "所有产品",
+      "wholesaleSilkDuvet": "蚕丝被批发",
+      "silkCribSheets": "丝绸床单",
+      "silkFilledDuvet": "丝绸填充被",
+      "redSilkBlanket": "红色丝绸被",
+      "veganSilkSheets": "纯素丝绸床单",
+      "wholesale": "批发",
+      "oemOdmSilk": "OEM/ODM 丝绸",
+      "silkDuvetManufacturer": "丝绸被制造商",
+      "silkQuality": "丝绸质量",
+      "silkProductionProcess": "丝绸生产过程",
+      "support": "支持",
+      "aboutUs": "关于我们",
+      "sustainability": "可持续发展",
+      "oekoTexCertified": "OEKO-TEX 认证",
+      "contactUs": "联系我们",
+      "blog": "博客",
+      "news": "新闻",
+      "silkGuides": "蚕丝指南",
+      "silkMaterials": "蚕丝材料",
+      "silkCare": "蚕丝护理",
+      "silkCompare": "蚕丝比较"
+    },
+    "footer": {
+      "logo": "太湖雪丝绸",
+      "description": "优质蚕丝被与丝绵被，带来最佳睡眠体验。",
+      "quickLinks": "快速链接",
+      "home": "首页",
+      "aboutUs": "关于我们",
+      "contactUs": "联系我们",
+      "blog": "博客",
+      "help": "帮助",
+      "faqs": "常见问题",
+      "shippingPolicy": "运输政策",
+      "returnsExchanges": "退货与换货",
+      "paymentMethods": "支付方式",
+      "privacyPolicy": "隐私政策",
+      "copyright": "© 2025 太湖雪丝绸。保留所有权利。"
+    },
+    "contactForm": {
+      "name": "姓名",
+      "email": "邮箱",
+      "phone": "电话",
+      "company": "公司",
+      "message": "您的留言",
+      "sending": "发送中...",
+      "sendMessage": "发送留言",
+      "messageReceived": "您的留言已收到！我们会尽快与您联系。",
+      "messageFailed": "发送留言失败。请稍后再试。"
+    },
+    "productCard": {
+      "sendInquiryNow": "立即咨询"
+    }
+}

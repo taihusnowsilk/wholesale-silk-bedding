@@ -5,6 +5,8 @@ import { ContactButton } from "@/components/ContactButton";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, CarouselApi } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from 'react';
+import { useTranslations } from 'next-intl';
+
 
 const bannerImages = [
   { src: "/images/taihu-snow-silk-banner-1.webp", alt: "Premium Silk Bedding Manufacturing" },
@@ -15,6 +17,7 @@ const bannerImages = [
 ];
 
 export function HomeBanner() {
+  const t = useTranslations('page.home.banner');
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 
@@ -38,13 +41,13 @@ export function HomeBanner() {
       {/* Fixed Text Overlay */}
       <div className="absolute inset-0 z-10 flex flex-col text-secondary items-center justify-end pb-16 ml-20 text-center max-w-4xl">
         <h1 className="text-2xl md:text-4xl font-bold mb-4  drop-shadow-lg">
-          Wholesale Bedding - Eco-Friendly Silk Hotel Bedding, Comforter Sets, Duvet Covers & More
+          {t('title')}
         </h1>
         <p className="text-base md:text-lg mb-6  drop-shadow-md">
-          25+ Years of Excellence in Manufacturing High-Quality Silk Bedding Products
+          {t('subtitle')}
         </p>
-        <ContactButton title="Send Inquiry Now" className="bg-primary/70 hover:bg-primary/90  font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
-          Send Inquiry Now
+        <ContactButton title={t('cta')} className="bg-primary/70 hover:bg-primary/90  font-semibold py-3 px-6 rounded-lg transition-colors duration-300">
+          {t('cta')}
         </ContactButton>
       </div>
 

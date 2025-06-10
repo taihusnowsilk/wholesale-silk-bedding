@@ -1,0 +1,32 @@
+{
+  "filter": {
+    "all": "All Products",
+    "allSeason": "All Season",
+    "winter": "Winter Collection",
+    "summer": "Summer Collection", 
+    "hotel": "Hotel Collection",
+    "children": "Children's Collection"
+  },
+  "items": {
+    "redSilkBlanket": {
+      "title": "Red Silk Blanket",
+      "description": "Premium Red Silk Blanket - Pure Mulberry Silk Bedding Quilt with Deep Red Silk Cooling Lightweight Design for Sofa",
+      "alt": "red silk blanket"
+    },
+    "silkCribSheets": {
+      "title": "Silk Crib Sheets", 
+      "description": "Premium Silk Crib Sheet - Natural White Mulberry Silk Fitted Sheet for Baby Bed and Crib Mattress",
+      "alt": "silk crib sheets"
+    },
+    "silkFilledDuvet": {
+      "title": "Silk Filled Duvet",
+      "description": "Premium Silk Filled Duvet - All-Season Silk Comforter with Organic Cotton Shell for Hair and Skin Health",
+      "alt": "silk filled duvet"
+    },
+    "veganSilkSheets": {
+      "title": "Vegan Silk Sheets",
+      "description": "Best Silk Sheets - Premium Vegan Silk Bedding Collection",
+      "alt": "vegan silk sheets"
+    }
+  }
+}

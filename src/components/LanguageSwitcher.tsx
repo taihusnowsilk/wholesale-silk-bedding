@@ -29,7 +29,7 @@ export default function LanguageSwitcher({ scrolled = false }: LanguageSwitcherP
         onChange={handleChange}
       >
         <option value="en" className="bg-primary/60 text-secondary">English</option>
-        {/* <option value="zh" className="bg-primary/60 text-secondary">简体中文</option> */}
+        <option value="zh" className="bg-primary/60 text-secondary">简体中文</option>
       </select>
       <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
         <svg className="h-4 w-4 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
