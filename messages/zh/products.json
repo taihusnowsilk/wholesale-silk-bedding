@@ -9,9 +9,9 @@
   },
   "items": {
     "redSilkBlanket": {
-      "title": "红色丝绸被",
+      "title": "真丝毯子",
       "description": "高级红色丝绸被 - 纯桑蚕丝床上用品被子，深红色丝绸凉爽轻质设计，适用于沙发",
-      "alt": "红色丝绸被"
+      "alt": "真丝毯子"
     },
     "silkCribSheets": {
       "title": "丝绸婴儿床单",
@@ -24,9 +24,9 @@
       "alt": "丝绸填充被"
     },
     "veganSilkSheets": {
-      "title": "纯素丝绸床单",
+      "title": "莫代尔丝绸套件",
       "description": "最佳丝绸床单 - 高级纯素丝绸床上用品系列",
-      "alt": "纯素丝绸床单"
+      "alt": "莫代尔丝绸套件"
     }
   }
 }
