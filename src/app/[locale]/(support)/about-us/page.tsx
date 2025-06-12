@@ -1,122 +1,136 @@
 import Image from 'next/image';
 import { ContactButton } from "@/components/ContactButton";
+import { useTranslations } from 'next-intl';
+import { generateMultilingualMetadata } from "@/lib/metadata";
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return generateMultilingualMetadata({
+    locale,
+    translationModule: 'support',
+    translationKey: 'about_us.metadata',
+    pathname: 'about-us',
+  });
+}
 
 export default function AboutUsPage() {
-  // Company data arrays for map rendering
-  const timelineData = [
-    {
-      year: '1995',
-      content: 'Founded as a family silk workshop in Suzhou, China\'s historic silk capital'
-    },
-    {
-      year: '2002',
-      content: 'First international B2B partnerships with Japanese and Korean wholesalers'
-    },
-    {
-      year: '2007',
-      content: 'Achieved ISO 9001 and Oeko-Tex Standard 100 certifications for quality assurance'
-    },
-    {
-      year: '2012',
-      content: 'Expanded to European and North American wholesale markets, built modern production facility'
-    },
-    {
-      year: '2018',
-      content: 'Introduced automated silk processing equipment, reached 500,000+ annual production capacity'
-    },
-    {
-      year: '2020',
-      content: 'Launched OEM/ODM services for custom hotel bedding and hospitality solutions'
-    },
-    {
-      year: '2024',
-      content: 'Established global distribution network serving 50+ countries with reliable supply chain'
-    }
-  ];
+  const t = useTranslations('support.about_us');
 
   const manufacturingCapabilities = [
     {
-      title: 'Annual Production Capacity',
+      title: t('capabilities.capabilities.0.title'),
       value: '500,000+',
-      unit: 'Units',
-      description: 'Complete bedding sets, comforters, and hotel linens'
+      unit: t('capabilities.capabilities.0.unit'),
+      description: t('capabilities.capabilities.0.description')
     },
     {
-      title: 'Factory Size',
+      title: t('capabilities.capabilities.1.title'),
       value: '15,000',
-      unit: 'sqm',
-      description: 'State-of-the-art manufacturing facility'
+      unit: t('capabilities.capabilities.1.unit'),
+      description: t('capabilities.capabilities.1.description')
     },
     {
-      title: 'Quality Control Points',
+      title: t('capabilities.capabilities.2.title'),
       value: '20+',
-      unit: 'Checkpoints',
-      description: 'From raw silk to finished products'
+      unit: t('capabilities.capabilities.2.unit'),
+      description: t('capabilities.capabilities.2.description')
     },
     {
-      title: 'Lead Time',
+      title: t('capabilities.capabilities.3.title'),
       value: '15-30',
-      unit: 'Days',
-      description: 'Fast turnaround for bulk orders'
+      unit: t('capabilities.capabilities.3.unit'),
+      description: t('capabilities.capabilities.3.description')
+    }
+  ];
+  // Company data arrays for map rendering
+  const timelineData = [
+    {
+      year: t('timeline_data.0.year'),
+      content: t('timeline_data.0.content')
+    },
+    {
+      year: t('timeline_data.1.year'),
+      content: t('timeline_data.1.content')
+    },
+    {
+      year: t('timeline_data.2.year'),
+      content: t('timeline_data.2.content')
+    },
+    {
+      year: t('timeline_data.3.year'),
+      content: t('timeline_data.3.content')
+    },
+    {
+      year: t('timeline_data.4.year'),
+      content: t('timeline_data.4.content')
+    },
+    {
+      year: t('timeline_data.5.year'),
+      content: t('timeline_data.5.content')
+    },
+    {
+      year: t('timeline_data.6.year'),
+      content: t('timeline_data.6.content')
     }
   ];
 
   const b2bServices = [
     {
-      title: 'OEM/ODM Manufacturing',
-      description: 'Custom silk bedding design and manufacturing according to your specifications, brand requirements, and market needs.',
+      title: t('b2b_services_data.0.title'),
+      description: t('b2b_services_data.0.description'),
       icon: '🏭'
     },
     {
-      title: 'Flexible MOQ',
-      description: 'Minimum order quantities starting from 100 pieces per style, scalable to meet your business growth.',
+      title: t('b2b_services_data.1.title'),
+      description: t('b2b_services_data.1.description'),
       icon: '📦'
     },
     {
-      title: 'Custom Packaging',
-      description: 'Private label packaging, custom hang tags, and branding solutions for your retail or hospitality business.',
+      title: t('b2b_services_data.2.title'),
+      description: t('b2b_services_data.2.description'),
       icon: '🎨'
     },
     {
-      title: 'Technical Support',
-      description: '24/7 technical assistance, fabric consultation, and product development support for your team.',
+      title: t('b2b_services_data.3.title'),
+      description: t('b2b_services_data.3.description'),
       icon: '🛠️'
     },
     {
-      title: 'Global Logistics',
-      description: 'Worldwide shipping solutions with trusted freight partners, ensuring timely delivery to 50+ countries.',
+      title: t('b2b_services_data.4.title'),
+      description: t('b2b_services_data.4.description'),
       icon: '🌍'
     },
     {
-      title: 'Quality Assurance',
-      description: 'Comprehensive QC inspections, pre-shipment reports, and international certification compliance.',
+      title: t('b2b_services_data.5.title'),
+      description: t('b2b_services_data.5.description'),
       icon: '✅'
     }
   ];
 
   const clientTypes = [
     {
-      type: 'Luxury Hotels & Resorts',
-      description: 'Premium bedding solutions for 5-star hospitality',
-      examples: 'Marriott, Hilton, Four Seasons partners',
+      type: t('client_types_data.0.type'),
+      description: t('client_types_data.0.description'),
+      examples: t('client_types_data.0.examples'),
       icon: '🏨'
     },
     {
-      type: 'Wholesale Distributors',
-      description: 'Bulk bedding supply for retail distribution',
-      examples: 'Home goods retailers, department stores',
+      type: t('client_types_data.1.type'),
+      description: t('client_types_data.1.description'),
+      examples: t('client_types_data.1.examples'),
       icon: '🏪'
     },
     {
-      type: 'E-commerce Brands',
-      description: 'Private label manufacturing for online sellers',
-      examples: 'Amazon sellers, D2C bedding brands',
+      type: t('client_types_data.2.type'),
+      description: t('client_types_data.2.description'),
+      examples: t('client_types_data.2.examples'),
       icon: '💻'
     },
     {
-      type: 'Hospitality Suppliers',
-      description: 'Contract manufacturing for hospitality vendors',
-      examples: 'Hotel linen suppliers, facility management',
+      type: t('client_types_data.3.type'),
+      description: t('client_types_data.3.description'),
+      examples: t('client_types_data.3.examples'),
       icon: '🤝'
     }
   ];
@@ -134,10 +148,10 @@ export default function AboutUsPage() {
         />
         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
           <div className="text-center text-white max-w-4xl px-4">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Leading Silk Bedding Manufacturer</h1>
-            <p className="text-xl md:text-2xl mb-8">Your Trusted B2B Partner for Wholesale Hotel Bedding & Custom Silk Products</p>
-            <ContactButton className="bg-primary hover:bg-primary/90 text-secondary font-semibold py-4 px-8 rounded-md transition-colors duration-300">
-              Request Wholesale Catalog
+            <h1 className="text-4xl md:text-6xl font-bold mb-4">{t('h1')}</h1>
+            <p className="text-xl md:text-2xl mb-8">{t('sub_title')}</p>
+            <ContactButton title={t('request_wholesale_catalog')} className="bg-primary hover:bg-primary/90 text-secondary font-semibold py-4 px-8 rounded-md transition-colors duration-300">
+              {t('request_wholesale_catalog')}
             </ContactButton>
           </div>
         </div>
@@ -148,21 +162,21 @@ export default function AboutUsPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold mb-6">29 Years of Manufacturing Excellence</h2>
+              <h2 className="text-4xl font-bold mb-6">{t('company_overview.h2')}</h2>   
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Since 1995, Taihu Snow has been China's leading manufacturer of premium silk bedding and hotel linens. Located in Suzhou, the historic heart of China's silk industry, we combine traditional craftsmanship with modern manufacturing technology.
+                {t('company_overview.p1')}
               </p>
               <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                We specialize in B2B wholesale manufacturing, serving luxury hotels, hospitality suppliers, retail distributors, and e-commerce brands worldwide. Our state-of-the-art facility produces over 500,000 bedding sets annually with consistent quality and competitive pricing.
+                {t('company_overview.p2')}
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary mb-2">50+</div>
-                  <div className="text-gray-600">Export Countries</div>
+                  <div className="text-gray-600">{t('company_overview.export_countries')}</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-primary mb-2">1000+</div>
-                  <div className="text-gray-600">B2B Partners</div>
+                  <div className="text-gray-600">{t('company_overview.b2b_partners')}</div>
                 </div>
               </div>
             </div>
@@ -181,9 +195,9 @@ export default function AboutUsPage() {
       {/* Manufacturing Capabilities */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">Manufacturing Capabilities</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">{t('capabilities.h2')}</h2>
           <p className="text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-            Advanced production facilities and quality control systems ensure consistent, high-volume manufacturing for your wholesale needs
+            {t('capabilities.p')}
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -202,8 +216,8 @@ export default function AboutUsPage() {
       {/* Company Timeline */}
       <section className="py-20">
         <div className="max-w-5xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">Our B2B Journey</h2>
-          <p className="text-center text-gray-600 mb-16">Key milestones in becoming a trusted wholesale manufacturing partner</p>
+          <h2 className="text-4xl font-bold text-center mb-4">{t('timeline.h2')}</h2>
+          <p className="text-center text-gray-600 mb-16">{t('timeline.p')}</p>
 
           <div className="max-w-4xl mx-auto relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primary"></div>
@@ -236,9 +250,9 @@ export default function AboutUsPage() {
       {/* B2B Services */}
       <section className="py-20 bg-primary/5">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">Comprehensive B2B Services</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">{t('b2b_services.h2')}</h2>
           <p className="text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-            Full-service manufacturing solutions designed for wholesale partners and business customers
+            {t('b2b_services.p')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -281,9 +295,9 @@ export default function AboutUsPage() {
       {/* Quality & Certifications */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-4">Quality Assurance & Certifications</h2>
+          <h2 className="text-4xl font-bold text-center mb-4">{t('quality_assurance.h2')}</h2>  
           <p className="text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-            International certifications and rigorous quality control ensure consistent product excellence
+            {t('quality_assurance.p')}
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -291,24 +305,24 @@ export default function AboutUsPage() {
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🏆</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">ISO 9001:2015</h3>
-              <p className="text-gray-600">Quality Management System certification ensuring consistent manufacturing standards</p>
+              <h3 className="text-xl font-semibold mb-3">{t('quality_assurance_data.0.title')}</h3>
+              <p className="text-gray-600">{t('quality_assurance_data.0.description')}</p>
             </div>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🌿</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">Oeko-Tex Standard 100</h3>
-              <p className="text-gray-600">Textile safety certification guaranteeing harmful substance-free products</p>
+              <h3 className="text-xl font-semibold mb-3">{t('quality_assurance_data.1.title')}</h3>
+              <p className="text-gray-600">{t('quality_assurance_data.1.description')}</p>
             </div>
             
             <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
               <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🔒</span>
               </div>
-              <h3 className="text-xl font-semibold mb-3">BSCI Certification</h3>
-              <p className="text-gray-600">Business Social Compliance Initiative ensuring ethical manufacturing practices</p>
+              <h3 className="text-xl font-semibold mb-3">{t('quality_assurance_data.2.title')}</h3>
+              <p className="text-gray-600">{t('quality_assurance_data.2.description')}</p>
             </div>
           </div>
         </div>
@@ -317,16 +331,13 @@ export default function AboutUsPage() {
       {/* Call to Action */}
       <section className="py-20 mb-10">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Partner with Us?</h2>
+          <h2 className="text-4xl font-bold mb-6">{t('cta.h2')}</h2>
           <p className="text-xl mb-8 opacity-90">
-            Join 1000+ satisfied B2B partners worldwide. Let's discuss your wholesale silk bedding requirements.
+            {t('cta.p')}
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
-            <ContactButton className="bg-secondary hover:bg-secondary/90 text-primary font-semibold py-4 px-8 rounded-md transition-colors duration-300">
-              Request Wholesale Quote
-            </ContactButton>
-            <ContactButton className="border-2 border-secondary hover:bg-secondary hover:text-primary text-secondary font-semibold py-4 px-8 rounded-md transition-colors duration-300">
-              Download Catalog
+            <ContactButton title={t('cta.request_wholesale_quote')} className="bg-secondary hover:bg-secondary/90 text-primary font-semibold py-4 px-8 rounded-md transition-colors duration-300">
+              {t('cta.request_wholesale_quote')}
             </ContactButton>
           </div>
         </div>

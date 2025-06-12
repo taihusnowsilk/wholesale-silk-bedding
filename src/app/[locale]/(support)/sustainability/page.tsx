@@ -1,190 +1,168 @@
-'use client';
+import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
+import { generateMultilingualMetadata } from "@/lib/metadata";
+import SustainabilityClient from './SustainabilityClient';
 
-import { useEffect } from 'react';
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  return generateMultilingualMetadata({
+    locale,
+    translationModule: 'support',
+    translationKey: 'sustainability.metadata',
+    pathname: 'sustainability',
+  });
+}
 
-// Four Hearts Philosophy data
-const fourHearts = [
-  {
-    icon: "⚖️",
-    title: "Perseverance • Governance Excellence",
-    description: "Building robust governance frameworks, enhancing risk management, and upholding business ethics to establish a solid foundation for sustainable development."
-  },
-  {
-    icon: "🎨",
-    title: "Craftsmanship • Silk Mastery",
-    description: "Embracing the spirit of \"perfecting every silk thread,\" we maintain quality excellence, drive innovation, and deliver premium products and services to our customers."
-  },
-  {
-    icon: "🌱",
-    title: "Dedication • Environmental Stewardship",
-    description: "Practicing green development principles, protecting biodiversity, and promoting sustainable operations to safeguard our ecological environment."
-  },
-  {
-    icon: "🤝",
-    title: "Unity • Shared Prosperity",
-    description: "Caring for employee growth, fulfilling social responsibilities, and promoting rural revitalization to create a better future together with all stakeholders."
-  }
-];
 
-// 2024 ESG Performance Highlights
+export default function Sustainability() {
+  const t = useTranslations('support.sustainability');
+
+  const fourHearts = [
+    {
+      icon: "⚖️",
+      title: t('four_hearts.0.title'),
+      description: t('four_hearts.0.description')
+    },
+    {
+      icon: "🎨",
+      title: t('four_hearts.1.title'),
+      description: t('four_hearts.1.description')
+    },
+    {
+      icon: "🌱",
+      title: t('four_hearts.2.title'),
+      description: t('four_hearts.2.description')
+    },
+    {
+      icon: "🤝",
+      title: t('four_hearts.3.title'),
+      description: t('four_hearts.3.description')
+    }
+  ];
+
+  // 2024 ESG Performance Highlights
 const esgMetrics = [
   {
     value: "2,268.92",
-    description: "Million RMB R&D Investment"
+    description: t('esg_highlights.esg1')
   },
   {
     value: "99",
-    description: "Valid Patents (8 Invention + 91 Utility Model)"
+    description: t('esg_highlights.esg2')
   },
   {
     value: "2,459",
-    description: "Copyright Works"
+    description: t('esg_highlights.esg3')
   },
   {
     value: "100%",
-    description: "Employee Training Coverage"
+    description: t('esg_highlights.esg4')
   },
   {
     value: "0.0091",
-    description: "Tons CO₂e per 10K RMB Revenue"
+    description: t('esg_highlights.esg5')
   },
   {
     value: "55.97%",
-    description: "Waste Recycling Rate"
+    description: t('esg_highlights.esg6')
   },
   {
     value: "22.2",
-    description: "Million RMB Social Investment"
+    description: t('esg_highlights.esg7')
   },
   {
     value: "17.47",
-    description: "Million RMB Total Tax Contribution"
+    description: t('esg_highlights.esg8')
   }
 ];
 
 // Achievements data
 const achievements = [
   {
-    title: "National Cultural Industry Demonstration Base",
-    issuer: "Ministry of Culture and Tourism, China",
-    description: "Recognition for outstanding contribution to cultural heritage preservation and innovation"
+    title: t('achievements_data.0.title'),
+    issuer: t('achievements_data.0.issuer'),
+    description: t('achievements_data.0.description')
   },
   {
-    title: "National Model Workers' Home",
-    issuer: "All-China Federation of Trade Unions",
-    description: "Honored for exemplary employee care and workplace excellence"
+    title: t('achievements_data.1.title'),
+    issuer: t('achievements_data.1.issuer'),
+    description: t('achievements_data.1.description')
   },
   {
-    title: "Best Employer 2024",
-    issuer: "Greater Suzhou Best Employer Committee",
-    description: "Recognized for creating an inclusive and supportive work environment"
+    title: t('achievements_data.2.title'),
+    issuer: t('achievements_data.2.issuer'),
+    description: t('achievements_data.2.description')
   },
   {
-    title: "ESG Value Communication Award",
-    issuer: "China ESG Sustainable Development Conference",
-    description: "Acknowledged for transparent ESG communication and stakeholder engagement"
+    title: t('achievements_data.3.title'),
+    issuer: t('achievements_data.3.issuer'),
+    description: t('achievements_data.3.description')
   },
   {
-    title: "High-Tech Enterprise Certification",
-    issuer: "Ministry of Science and Technology, China",
-    description: "Continuous advancement in technological innovation and R&D capabilities"
+    title: t('achievements_data.4.title'),
+    issuer: t('achievements_data.4.issuer'),
+    description: t('achievements_data.4.description')
   },
   {
-    title: "Specialized & Innovative SME (Provincial)",
-    issuer: "Jiangsu Department of Commerce",
-    description: "Recognition for specialized innovation and market leadership"
+    title: t('achievements_data.5.title'),
+    issuer: t('achievements_data.5.issuer'),
+    description: t('achievements_data.5.description')
   },
   {
-    title: "Jiangsu Province Integration of Domestic & Foreign Trade Pilot Enterprise",
-    issuer: "Jiangsu Department of Commerce",
-    description: "Leading integration of domestic and international trade practices"
+    title: t('achievements_data.6.title'),
+    issuer: t('achievements_data.6.issuer'),
+    description: t('achievements_data.6.description')
   },
   {
-    title: "First Prize - Suzhou Textile & Silk Science & Technology Progress Award",
-    issuer: "Suzhou Textile & Silk Science & Technology Progress Award Committee",
-    description: "Excellence in textile and silk technological advancement"
+    title: t('achievements_data.7.title'),
+    issuer: t('achievements_data.7.issuer'),
+    description: t('achievements_data.7.description')
   }
 ];
 
 // Sustainability Goals data
 const sustainabilityGoals = [
   {
-    title: "Environmental Protection",
-    description: "Advancing green operations, improving resource efficiency, reducing environmental impact, and protecting biodiversity through innovative practices."
+    title: t('sustainability_goals_data.0.title'),
+    description: t('sustainability_goals_data.0.description')
   },
   {
-    title: "Product Innovation",
-    description: "Increasing R&D investment, driving technological innovation, and developing more eco-friendly, healthy, and high-quality silk products."
+    title: t('sustainability_goals_data.1.title'),
+    description: t('sustainability_goals_data.1.description')
   },
   {
-    title: "Employee Development",
-    description: "Creating an inclusive and diverse work environment, providing growth opportunities, and ensuring employee rights and occupational health and safety."
+    title: t('sustainability_goals_data.2.title'),
+    description: t('sustainability_goals_data.2.description')
   },
   {
-    title: "Social Responsibility",
-    description: "Actively participating in rural revitalization, preserving silk culture, and contributing to community development and cultural heritage."
+    title: t('sustainability_goals_data.3.title'),
+    description: t('sustainability_goals_data.3.description')
   }
 ];
 
-
-export default function Sustainability() {
-
-  useEffect(() => {
-    // Scroll Animation Handler
-    function handleScrollAnimation() {
-      const elements = document.querySelectorAll('.fade-in');
-
-      elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-
-        if (elementTop < window.innerHeight - elementVisible) {
-          element.classList.add('visible');
-        }
-      });
-    }
-
-    // Initialize animations on load and scroll
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(handleScrollAnimation);
-        ticking = true;
-        setTimeout(() => { ticking = false; }, 16);
-      }
-    };
-
-    let ticking = false;
-    window.addEventListener('scroll', handleScroll);
-    handleScrollAnimation(); // Initial call
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
-    <>
+    <SustainabilityClient>
       <main className="pt-16">
         {/* Hero Section */}
         <section className="relative py-20 bg-primary/80 text-secondary text-center overflow-hidden">
           <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
           <div className="max-w-6xl mx-auto px-8 relative z-10">
-            <h1 className="text-5xl md:text-6xl font-light mb-4 fade-in">Sustainability</h1>
+            <h1 className="text-5xl md:text-6xl font-light mb-4 fade-in">{t('hero.h1')}</h1>
             <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto mb-8 fade-in">
-              Preserving thousand-year silk heritage while weaving a sustainable future for generations to come
+              {t('hero.p')}
             </p>
             <div className="flex flex-wrap justify-center gap-12 mt-12">
               <div className="text-center fade-in">
                 <div className="text-3xl font-bold mb-1 text-yellow-400">5,000+</div>
-                <div className="text-sm opacity-80">Years of Silk Heritage</div>
+                <div className="text-sm opacity-80">{t('hero.p2')}</div>
               </div>
               <div className="text-center fade-in">
                 <div className="text-3xl font-bold mb-1 text-yellow-400">100%</div>
-                <div className="text-sm opacity-80">Natural Materials</div>
+                <div className="text-sm opacity-80">{t('hero.p3')}</div>
               </div>
               <div className="text-center fade-in">
-                <div className="text-3xl font-bold mb-1 text-yellow-400">Carbon</div>
-                <div className="text-sm opacity-80">Neutral Goals</div>
+                <div className="text-3xl font-bold mb-1 text-yellow-400">{t('hero.carbon')}</div>
+                <div className="text-sm opacity-80">{t('hero.p4')}</div>
               </div>
             </div>
           </div>
@@ -194,10 +172,10 @@ export default function Sustainability() {
         <section className="py-20 bg-white">
           <div className="max-w-6xl mx-auto px-8">
             <h2 className="text-center text-4xl font-light mb-4 fade-in text-primary">
-              Our Four Hearts Philosophy
+              {t('philosophy.h2')}
             </h2>
             <p className="text-center max-w-3xl mx-auto mb-12 text-lg fade-in text-gray-600">
-              Guided by four core principles that drive our commitment to sustainable development and responsible business practices
+              {t('philosophy.p')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               {fourHearts.map((heart, index) => (
@@ -222,10 +200,10 @@ export default function Sustainability() {
         <section className="py-20 bg-primary/10">
           <div className="max-w-6xl mx-auto px-8">
             <h2 className="text-center text-4xl font-light mb-4 fade-in text-primary">
-              2024 ESG Performance Highlights
+              {t('esg_highlights.h2')}
             </h2>
             <p className="text-center max-w-4xl mx-auto mb-12 fade-in text-gray-600">
-              Our commitment to sustainability is reflected in measurable outcomes across environmental, social, and governance dimensions.
+              {t('esg_highlights.p')}
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12">
               {esgMetrics.map((metric, index) => (
@@ -245,10 +223,10 @@ export default function Sustainability() {
         <section className="py-20">
           <div className="max-w-6xl mx-auto px-8">
             <h2 className="text-center text-4xl font-light mb-4 fade-in text-primary">
-              2024 Recognition & Achievements
+              {t('achievements.h2')}
             </h2>
             <p className="text-center max-w-3xl mx-auto mb-12 text-lg fade-in text-gray-600">
-              Our sustainability efforts have been recognized by leading organizations and industry bodies
+              {t('achievements.p')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               {achievements.map((achievement, index) => (
@@ -276,10 +254,10 @@ export default function Sustainability() {
           <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 via-transparent to-transparent" />
           <div className="max-w-6xl mx-auto px-8 relative z-10">
             <h2 className="text-center text-4xl text-primary font-light mb-4 fade-in">
-              Our Sustainability Commitments
+              {t('sustainability_goals.h2')}
             </h2>
             <p className="text-center max-w-3xl mx-auto mb-12 text-gray-600 text-lg  opacity-90 fade-in">
-              Setting ambitious targets to drive positive impact across our value chain and beyond
+              {t('sustainability_goals.p')}
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
               {sustainabilityGoals.map((goal, index) => (
@@ -303,25 +281,25 @@ export default function Sustainability() {
         <section className="py-20 text-center bg-gray-50">
           <div className="max-w-6xl mx-auto px-8">
             <h2 className="text-center text-4xl font-light mb-8 fade-in text-primary">
-              ESG Report Download
+              {t('esg_report.h2')}
             </h2>
             <div className="bg-white max-w-2xl mx-auto p-12 rounded-2xl shadow-lg fade-in">
               <h3 className="text-2xl font-semibold mb-4 text-blue-800">
-                2024 Environmental, Social & Governance (ESG) Report
+                {t('esg_report.h3')}
               </h3>
               <p className="mb-8 text-gray-600 leading-relaxed">
-                Discover detailed insights into Taihu Snow's sustainability philosophy, practices, and performance achievements
+                {t('esg_report.p')}
               </p>
               <a
                 href="#"
                 className="inline-block px-10 py-4 text-secondary text-lg font-medium rounded-lg hover:transform hover:-translate-y-0.5 hover:shadow-lg transition-all duration-300 bg-primary no-underline"
               >
-                Download Full Report
+                {t('esg_report.download_full_report')}
               </a>
             </div>
           </div>
         </section>
       </main>
-    </>
+    </SustainabilityClient>
   );
 } 

@@ -1,0 +1,350 @@
+{
+      "contact_us": {
+            "metadata": {
+                  "title": "Contact Us | Wholesale Silk Bedding - Taihu Snow Silk",
+                  "description": "Reach out to Wholesale Silk Bedding for inquiries about our premium silk bedding products. Contact us today for customer support, wholesale orders, or product details. Fast, reliable service guaranteed!"
+            },
+            "h1": "Contact Us",
+            "send_us_a_message": "Send Us a Message",
+            "reach_us": "Reach Us",
+            "phone": "Phone",
+            "email": "Email",
+            "address": "Address",
+            "address_line1": "Suzhou Taihu Snow Silk Co., Ltd.",
+            "address_line2": "No. 2428, Zhenze 318 National Road",
+            "address_line3": "Suzhou, Jiangsu",
+            "address_line4": "China",
+            "location": "Location",
+            "frequently_asked_questions": "Frequently Asked Questions",
+            "faq_1": {
+                  "question": "How quickly can I expect a response to my inquiry?",
+                  "answer": "We aim to respond to all inquiries within 24 hours during business days. For urgent matters, please call our sales team directly."
+            },
+            "faq_2": {
+                  "question": "How can I request product samples?",
+                  "answer": "You can request samples by selecting \"Sample Request\" in the inquiry type of our contact form, or by emailing wholesale@silkduvet.com with your specific requirements."
+            },
+            "faq_3": {
+                  "question": "Do you have representatives who can visit our location?",
+                  "answer": "Yes, for significant wholesale opportunities, our representatives can arrange visits to your location. Please contact our wholesale department to discuss this option."
+            },
+            "faq_4": {
+                  "question": "How can I find the status of my inquiry or order?",
+                  "answer": "For inquiries about order status, please email support@silkduvet.com with your order number or contact your assigned account manager directly."
+            }
+      },
+      "about_us": {
+            "metadata": {
+                  "title": "About Us | Wholesale Silk Bedding - Taihu Snow Silk",
+                  "description": "Learn about Taihu Snow Silk, your trusted source for premium silk bedding products. Discover our commitment to quality, sustainability, and customer satisfaction"
+            },
+            "h1": "About Us",
+            "sub_title": "Your Trusted B2B Partner for Wholesale Hotel Bedding & Custom Silk Products",
+            "request_wholesale_catalog": "Request Wholesale Catalog",
+            "company_overview": {
+                  "h2": "29 Years of Manufacturing Excellence",
+                  "p1": "Since 1995, Taihu Snow has been China's leading manufacturer of premium silk bedding and hotel linens. Located in Suzhou, the historic heart of China's silk industry, we combine traditional craftsmanship with modern manufacturing technology.",
+                  "p2": "We specialize in B2B wholesale manufacturing, serving luxury hotels, hospitality suppliers, retail distributors, and e-commerce brands worldwide. Our state-of-the-art facility produces over 500,000 bedding sets annually with consistent quality and competitive pricing.",
+                  "export_countries": "Export Countries",
+                  "b2b_partners": "B2B Partners"
+            },
+            "capabilities": {
+                  "h2": "Manufacturing Capabilities",
+                  "p": "Advanced production facilities and quality control systems ensure consistent, high-volume manufacturing for your wholesale needs",
+                  "capabilities": [
+                      {
+                        "title": "Annual Production Capacity",
+                        "unit": "Units",
+                        "description": "Complete bedding sets, comforters, and hotel linens"
+                      },
+                      {
+                        "title": "Factory Size",
+                        "unit": "sqm",
+                        "description": "State-of-the-art manufacturing facility"
+                      },
+                      {
+                        "title": "Quality Control Points",
+                        "unit": "Checkpoints",
+                        "description": "From raw silk to finished products"
+                      },
+                      {
+                        "title": "Lead Time",
+                        "unit": "Days",
+                        "description": "Fast turnaround for bulk orders"
+                      }
+                  ]
+            },
+            "timeline": {
+                  "h2": "Our B2B Journey",
+                  "p": "Key milestones in becoming a trusted wholesale manufacturing partner"
+            },
+            "timeline_data": [
+                  {
+                        "year": "1995",
+                        "content": "Founded as a family silk workshop in Suzhou, China's historic silk capital"
+                  },
+                  {
+                        "year": "2002",
+                        "content": "First international B2B partnerships with Japanese and Korean wholesalers"
+                  },
+                  {
+                        "year": "2007",
+                        "content": "Achieved ISO 9001 and Oeko-Tex Standard 100 certifications for quality assurance"
+                  },
+                  {
+                        "year": "2012",
+                        "content": "Expanded to European and North American wholesale markets, built modern production facility"
+                  },
+                  {
+                        "year": "2018",
+                        "content": "Introduced automated silk processing equipment, reached 500,000+ annual production capacity"
+                  },
+                  {
+                        "year": "2020",
+                        "content": "Launched OEM/ODM services for custom hotel bedding and hospitality solutions"
+                  },
+                  {
+                        "year": "2024",
+                        "content": "Established global distribution network serving 50+ countries with reliable supply chain"
+                  }
+            ],
+            "b2b_services": {
+                  "h2": "Comprehensive B2B Services",
+                  "p": "Full-service manufacturing solutions designed for wholesale partners and business customers"
+            },
+            "b2b_services_data": [
+                  {
+                        "title": "OEM/ODM Manufacturing",
+                        "description": "Custom silk bedding design and manufacturing according to your specifications, brand requirements, and market needs."
+                  },
+                  {
+                        "title": "Flexible MOQ",
+                        "description": "Minimum order quantities starting from 100 pieces per style, scalable to meet your business growth."
+                  },
+                  {
+                        "title": "Custom Packaging",
+                        "description": "Private label packaging, custom hang tags, and branding solutions for your retail or hospitality business."
+                  },
+                  {
+                        "title": "Technical Support",
+                        "description": "24/7 technical assistance, fabric consultation, and product development support for your team."
+                  },
+                  {
+                        "title": "Global Logistics",
+                        "description": "Worldwide shipping solutions with trusted freight partners, ensuring timely delivery to 50+ countries."
+                  },
+                  {
+                        "title": "Quality Assurance",
+                        "description": "Comprehensive QC inspections, pre-shipment reports, and international certification compliance."
+                  }
+            ],
+            "client_types": {
+                  "h2": "Who We Serve",
+                  "p": "Trusted manufacturing partner for diverse B2B clients across hospitality, retail, and e-commerce sectors"
+            },
+            "client_types_data": [
+                  {
+                        "type": "Luxury Hotels & Resorts",
+                        "description": "Premium bedding solutions for 5-star hospitality",
+                        "examples": "Marriott, Hilton, Four Seasons partners"
+                  },
+                  {
+                        "type": "Wholesale Distributors",
+                        "description": "Bulk bedding supply for retail distribution",
+                        "examples": "Home goods retailers, department stores"
+                  },
+                  {
+                        "type": "E-commerce Brands",
+                        "description": "Private label manufacturing for online sellers",
+                        "examples": "Amazon sellers, D2C bedding brands"
+                  },
+                  {
+                        "type": "Hospitality Suppliers",    
+                        "description": "Contract manufacturing for hospitality vendors",
+                        "examples": "Hotel linen suppliers, facility management"
+                  }
+            ],
+            "quality_assurance": {
+                  "h2": "Quality Assurance & Certifications",
+                  "p": "International certifications and rigorous quality control ensure consistent product excellence"
+            },
+            "quality_assurance_data": [
+                  {
+                        "title": "ISO 9001:2015",
+                        "description": "Quality Management System certification ensuring consistent manufacturing standards"
+                  },
+                  {
+                        "title": "Oeko-Tex Standard 100",
+                        "description": "Textile safety certification guaranteeing harmful substance-free products"
+                  },
+                  {
+                        "title": "BSCI Certification",
+                        "description": "Business Social Compliance Initiative ensuring ethical manufacturing practices"
+                  }
+            ],
+            "cta": {
+                  "h2": "Ready to Partner with Us?",
+                  "p": "Join 1000+ satisfied B2B partners worldwide. Let's discuss your wholesale silk bedding requirements.",
+                  "request_wholesale_quote": "Request Wholesale Quote"
+            }
+      },
+      "oeko": {
+            "metadata": {
+                  "title": "Oeko-Tex Certified | Wholesale Silk Bedding - Taihu Snow Silk",
+                  "description": "Taihu Snow Silk is OEKO-TEX® Standard 100 Certified, ensuring the highest safety standards for textiles through rigorous testing and certification processes"
+            },
+            "hero": {
+                  "h1": "Oeko-Tex Certified",
+                  "p": "Ensuring the highest safety standards for textiles through rigorous testing and certification processes",
+                  "test_parameters": "Test Parameters",
+                  "certification_level": "Certification Level",
+                  "global_test_institutes": "Global Test Institutes"
+            },
+            "what_is_oeko_tex": {
+                  "h2": "1. What is OEKO-TEX® Standard 100?",
+                  "p1": "The OEKO-TEX® standards 100 is developed and managed by the International OEKO-TEX® Association, a group of 16 textile research and test institutes in Europe and Japan, with representative agencies and contact offices in over 60 countries worldwide.",
+                  "p2": "Products that pass the test in this system are allowed to carry a certification label that guarantees to the consumers that the product does not contain harmful substances at levels that can be dangerous to the human body. No matter beddings or sleepwears, most of TaiHuSnow's products own the OEKO certification and are safe and healthy for your skin.",
+                  "p3": "OEKO-TEX® Standard 100 applies throughout the textile industry and its scope covers textile and leather items at all levels of production, including textile and non-textile accessories. The standard is also applicable to mattresses, feathers and downs, foams, upholstery, and others material with similar characteristics.",
+                  "p4": "OEKO-TEX® products classes are divided based on their intended use:",
+                  "p5": "Textiles and textile toys for babies and small children up to the age of three, e.g. underwear, romper suits, bed linen, bedding, soft toys etc. (43% of all certificates.)",
+                  "p6": "Textiles having a large part of their surface in direct contact with the skin, e.g. underwear, bed linen, terry goods, shirts, blouses etc. (53% of all certificates.)",
+                  "p7": "Textiles which do not come into contact with the skin, or only have a small part of their surface in contact with the skin, e.g. jackets, coats, interlining materials etc. (1% of all certificates.)",
+                  "p8": "Furnishing materials for decorative purposes such as table linen and curtains, but also textile wall and floor coverings etc. (3% of all certificates.)",
+                  "p9": "A tested textile product is allocated to one of the four Oeko-Tex® product classes based on its intended use. The more intensively a product comes into contact with the skin, the stricter the human ecological requirements it must fulfill.",
+                  "p10": "TaiHuSnow has obtained Oeko-Tex Standard 100 Class II certification. This means our product passed a highly reliable test consisting of over 100 strict test standards determined by the above research institutions.",
+                  "p11": "An OEKO-TEX® certificate is valid for 12 months. At the end of this time, it can be renewed for another year. This approach is recommended to ensure continuous product safety and smooth processes all along the textile production chain."
+            },
+            "how_to": {
+                  "h2": "2. How to check the validity of the certificate?",
+                  "p1": "Enter the certificate number in the Official Authorization Website, the result will produce details of the validity status, the relevant product class and the articles covered by this certificate number. If the validity needs to be verified, the contact details of the relevant institute will be displayed."
+            },
+            "how_get_oeko": {
+                  "h2": "3. How TAIHUSNOW Products Get Oeko-Tex® Standard 100 Certified",
+                  "p1": "The process for TAIHUSNOW' pure silk fabric to be Oeko-Tex® Standard 100 Certified is quite rigorous, complicated and must be renewed on an annual basis. Every year TAIHUSNOW submits a preliminary application inquiry to the OEKO-TEX certification institute, then we receive a copy of the application materials provided by the issuing authority, including the application form, quality compliance statement, and quality system report. TAIHUSNOW only need to truthfully declare the processing information of the product (including raw materials, auxiliary materials, dyeing and chemical materials, various processing procedures and product control measures, etc.) according to the questions on the application form, and then the OEKO-TEX institute will verify the relevant information and classify products, and a \"sample order\" will be received to prepare test silk samples.",
+                  "p2": "Next, an independent Oeko-Tex® lab tests the silk according to protocol and documents, and they will send a professional inspectors to have a on-site audit in our factory. Certificates will be given only all the test passed."
+            }
+      },
+      "sustainability": {
+            "metadata": {
+                  "title": "Sustainability | Wholesale Silk Bedding - Taihu Snow Silk",
+                  "description": "Discover Taihu Snow Silk's commitment to sustainability. Explore our eco-friendly silk bedding products, crafted with environmentally responsible practices for a greener future"
+            },
+            "hero": {
+                  "h1": "Sustainability",
+                  "p": "Preserving thousand-year silk heritage while weaving a sustainable future for generations to come",
+                  "p2": "5,000+ Years of Silk Heritage",
+                  "p3": "100% Natural Materials",
+                  "carbon": "Carbon",
+                  "p4": "Neutral Goals"
+            },
+            "philosophy": {
+                  "h2": "Our Four Hearts Philosophy",
+                  "p": "Guided by four core principles that drive our commitment to sustainable development and responsible business practices"
+            },
+            "four_hearts": [
+                  {
+                        "title": "Perseverance • Governance Excellence",
+                        "description": "Building robust governance frameworks, enhancing risk management, and upholding business ethics to establish a solid foundation for sustainable development."
+                  },
+                  {
+                        "title": "Craftsmanship • Silk Mastery",
+                        "description": "Embracing the spirit of \"perfecting every silk thread,\" we maintain quality excellence, drive innovation, and deliver premium products and services to our customers."
+                  },
+                  {
+                        "title": "Dedication • Environmental Stewardship",
+                        "description": "Practicing green development principles, protecting biodiversity, and promoting sustainable operations to safeguard our ecological environment."
+                  },
+                  {
+                        "title": "Unity • Shared Prosperity",
+                        "description": "Caring for employee growth, fulfilling social responsibilities, and promoting rural revitalization to create a better future together with all stakeholders."
+                  }
+            ],
+            "esg_highlights": {
+                  "h2": "2024 ESG Performance Highlights",
+                  "p": "Our commitment to sustainability is reflected in measurable outcomes across environmental, social, and governance dimensions.",
+                  "esg1": "Million RMB R&D Investment",
+                  "esg2": "Valid Patents (8 Invention + 91 Utility Model)",
+                  "esg3": "Copyright Works",
+                  "esg4": "Employee Training Coverage",
+                  "esg5": "Tons CO₂e per 10K RMB Revenue",
+                  "esg6": "Waste Recycling Rate",
+                  "esg7": "Million RMB Social Investment",
+                  "esg8": "Million RMB Total Tax Contribution"
+            },
+            "achievements": {
+                  "h2": "2024 Recognition & Achievements",
+                  "p": "Our sustainability efforts have been recognized by leading organizations and industry bodies"
+            },
+            "achievements_data": [
+                  {
+                        "title": "National Cultural Industry Demonstration Base",
+                        "issuer": "Ministry of Culture and Tourism, China",
+                        "description": "Recognition for outstanding contribution to cultural heritage preservation and innovation"
+                  },
+                  {
+                        "title": "National Model Workers' Home",
+                        "issuer": "All-China Federation of Trade Unions",
+                        "description": "Honored for exemplary employee care and workplace excellence"
+                  },
+                  {
+                        "title": "Best Employer 2024",
+                        "issuer": "Greater Suzhou Best Employer Committee",
+                        "description": "Recognized for creating an inclusive and supportive work environment"
+                  },
+                  {
+                        "title": "ESG Value Communication Award",
+                        "issuer": "China ESG Sustainable Development Conference",
+                        "description": "Acknowledged for transparent ESG communication and stakeholder engagement"
+                  },
+                  {
+                        "title": "High-Tech Enterprise Certification",
+                        "issuer": "Ministry of Science and Technology, China",
+                        "description": "Continuous advancement in technological innovation and R&D capabilities"
+                  },
+                  {
+                        "title": "Specialized & Innovative SME (Provincial)",
+                        "issuer": "Jiangsu Department of Commerce",
+                        "description": "Recognition for specialized innovation and market leadership"
+                  },
+                  {
+                        "title": "Jiangsu Province Integration of Domestic & Foreign Trade Pilot Enterprise",
+                        "issuer": "Jiangsu Department of Commerce",
+                        "description": "Leading integration of domestic and international trade practices"
+                  },
+                  {
+                        "title": "First Prize - Suzhou Textile & Silk Science & Technology Progress Award",
+                        "issuer": "Suzhou Textile & Silk Science & Technology Progress Award Committee",
+                        "description": "Excellence in textile and silk technological advancement"
+                  }
+            ],
+            "sustainability_goals": {
+                  "h2": "Our Sustainability Commitments",
+                  "p": "Setting ambitious targets to drive positive impact across our value chain and beyond"
+            },
+            "sustainability_goals_data": [
+                  {
+                        "title": "Environmental Protection",
+                        "description": "Advancing green operations, improving resource efficiency, reducing environmental impact, and protecting biodiversity through innovative practices."
+                  },
+                  {
+                        "title": "Product Innovation",
+                        "description": "Increasing R&D investment, driving technological innovation, and developing more eco-friendly, healthy, and high-quality silk products."
+                  },
+                  {
+                        "title": "Employee Development",
+                        "description": "Creating an inclusive and diverse work environment, providing growth opportunities, and ensuring employee rights and occupational health and safety."
+                  },
+                  {
+                        "title": "Social Responsibility",
+                        "description": "Actively participating in rural revitalization, preserving silk culture, and contributing to community development and cultural heritage."
+                  }
+            ],
+            "esg_report": {
+                  "h2": "ESG Report Download",
+                  "h3": "2024 Environmental, Social & Governance (ESG) Report",
+                  "p": "Discover detailed insights into Taihu Snow's sustainability philosophy, practices, and performance achievements",
+                  "download_full_report": "Download Full Report"
+            }
+
+      }
+}
